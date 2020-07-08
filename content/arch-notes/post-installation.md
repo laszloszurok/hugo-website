@@ -196,7 +196,7 @@ I am going to install my build of [DWM](https://wiki.archlinux.org/index.php/Dwm
 
 I'm cloning all my suckless builds, config files and scripts from my github. My scripts may or may not work on your machine, as some of them are specific to the hardware in my laptop.
     
-    ❯ git clone https://github.com/sz-laszlo/suckless-arch.git
+    ❯ git clone https://github.com/laszloszurok/suckless-arch.git
 
 Move the content of the cloned directory directly to you home folder, then go into the folder suckless-builds/dwm and execute the following command:
 
