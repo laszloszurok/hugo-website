@@ -170,6 +170,21 @@ Settings for the antenna:
 
     ❯ sudo modprobe -r rtl8723de && sudo modprobe rtl8723de ant_sel=2
 
+## Accessing the AUR
+
+The [Arch User Repository](https://wiki.archlinux.org/index.php/Arch_User_Repository) - as the name suggests - is a repository which contains software made by the community. You can not access this repository directly with pacman. You have to install
+a software called an AUR helper to be able to install packages from this repo. My favourite one is [yay](https://github.com/Jguer/yay). You can install it with the following commands:
+
+```
+❯ git clone https://aur.archlinux.org/yay.git
+``` 
+```
+❯ cd yay
+``` 
+```
+❯ makepkg -si
+``` 
+
 ## Setting up a graphical enviroment (xorg)
 
 First of all we are going to install graphical drivers.
@@ -186,7 +201,7 @@ Then we are going to install [xorg](https://wiki.archlinux.org/index.php/Xorg).
 
     ❯ sudo pacman -S xorg
 
-We need to install the package called [xorg-xinit](https://wiki.archlinux.org/index.php/Xinit) as well:
+We need to install a package called [xorg-xinit](https://wiki.archlinux.org/index.php/Xinit) as well:
 
     ❯ sudo pacman -S xorg-xinit
 
@@ -216,3 +231,55 @@ Save the file and exit the editor. Now you should be able to launch dwm with the
     ❯ startx
 
 Make sure you have a terminal emulator installed before running startx. If you installed all of my suckless builds you have [st](https://wiki.archlinux.org/index.php/St).
+
+If you don't want to launch the X server manually with the startx command every time you start up your computer, you have to install a display manager. I am going to install [lightdm](https://wiki.archlinux.org/index.php/LightDM).
+
+    ❯ sudo pacman -S lightdm
+
+We also need a greeter (a graphical login screen). My favourite one is called [lightdm-slick-greeter](https://github.com/linuxmint/slick-greeter). It's in the AUR, so you have to install it with an AUR helper. I am using yay.
+
+    ❯ yay -S lightdm-slick-greeter
+
+We have to make some configurations to make lightdm work. Open the file located at /etc/lightdm/lightdm.conf with a texteditor and uncomment the following line under the [LightDM] section:
+
+```text
+[LightDM]
+...
+sessions-directory=/usr/share/lightdm/sessions:/usr/share/xsessions:/usr/share/wayland-sessions
+...
+```
+
+Now under the [Seat:\*] section, set the default greeter to lightdm-slick-greeter and also set the user-session to dwm as you can see here:
+
+```text
+[Seat:*]
+...
+greeter-session=lightdm-slick-greeter
+...
+user-session=dwm
+...
+```
+
+For the user-session to work we have to create a file called dwm.desktop. Place this file to the following location: /usr/share/xsessions/ . Open the file with a texteditor and write
+the following configuration into it:
+
+```text
+[Desktop Entry]
+Encoding=UTF-8
+Name=dwm
+Comment=Dynamic Window Manager
+Exec=/usr/local/bin/dwm
+Type=Application
+```
+
+Now lightdm is configured, but we have to enable it with [systemctl](https://wiki.archlinux.org/index.php/Systemd). This way lightdm will automatically launch when you boot up your computer.
+
+    ❯ systemctl enable lightdm
+
+So we have a display manager with a greeter, but the greeter is just a black screen and a login form by default. If you want to set a wallpaper, you can set it through the 
+lightdm-slick-greeter configuration file, but there is a nice graphical tool in the AUR called lightdm-settings which lets you manage the greeter's settings in an easy way.
+Install it with the following command:
+
+    ❯ yay -S lightdm-settings
+
+After you reboot, you should see the lightdm-slick-greeter login screen and DWM should automatically start after you log in.
