@@ -358,3 +358,16 @@ EndSection
 
 Restart the X server for the changes to take effect.
 
+## Enabling sound
+
+I'm using [ALSA](https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture) to enable sound on my machine. Install alsa-utils with the following command. This will provede a program called alsa-mixer which you can use to control sound.
+```
+❯ sudo pacman -S alsa-utils
+```
+
+I have media control buttons on my laptop (they can control for eg. switching to next/prev. song on Spotify). For these to work I'm going to install playerctl.
+```
+❯ sudo pacman -S playerctl
+```
+
+I have alsamixer and playerctl commands binded to the volume level controlling and media controlling keys in my DWM config, thats how I make these keys functional.
