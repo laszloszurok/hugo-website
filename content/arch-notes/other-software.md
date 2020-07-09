@@ -58,3 +58,14 @@ LD_PRELOAD=/usr/lib/libcurl.so.4:/home/<USERNAME>/spotifywm/spotifywm.so /usr/bi
 ```
 
 Replace \<USERNAME\> with your username, then save the file and make it executable. Now if you launch Spotify it should open on the workspace it's assigned to.
+
+## Changing the default shell to zsh
+
+Install zsh:
+```
+❯ sudo pacman -S zsh
+```
+Change the shell for the current user:
+```
+❯ chsh -s /usr/bin/zsh
+```
