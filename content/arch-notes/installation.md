@@ -5,7 +5,8 @@ draft: false
 toc: false
 images:
 tags:
-  - untagged
+  - arch
+  - installation
 ---
 More info on the [wiki](https://wiki.archlinux.org/index.php/Installation_guide).
 

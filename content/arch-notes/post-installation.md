@@ -5,8 +5,16 @@ draft: false
 toc: false
 images:
 tags:
-  - untagged
+  - arch
+  - post-install
 ---
+
+## Generating the filesystem table
+
+Creating the [fstab](https://wiki.archlinux.org/index.php/Fstab) file:
+
+    ❯ genfstab -U /mnt >> /mnt/etc/fstab
+
 ## Chroot into the installed system
 
 With the [chroot](https://wiki.archlinux.org/index.php/Chroot) command you leave the live enviroment and enter the newly installed system.
@@ -133,9 +141,6 @@ Starting and eanbling [network](https://wiki.archlinux.org/index.php/Network_con
 ```
 ❯ systemctl enable --now NetworkManager
 ```
-```
-❯ systemctl enable --now dhcpcd
-```
 
 As I mentioned my wireless card is not working yet, I'm going to fix it now.
 
@@ -146,10 +151,10 @@ Installing pre-requirements:
 Installing the wireless driver:
 
 ```
-❯ git clone https://github.com/lwfinger/rtlwifi_new.git -b extended
+❯ git clone https://github.com/lwfinger/rtw88.git
 ```
 ```
-❯ cd rtlwifi_new
+❯ cd rtw88
 ```
 ```
 ❯ make
@@ -161,14 +166,11 @@ Installing the wireless driver:
 Installing the driver as a [kernel module](https://wiki.archlinux.org/index.php/Kernel_module) with [dkms](https://wiki.archlinux.org/index.php/Dynamic_Kernel_Module_Support), so it will be rebuilt automatically at kernel updates:
 
 ```
-❯ sudo dkms add ./rtlwifi_new
+❯ sudo dkms add ./rtw88
 ```
 ```
 ❯ sudo dkms install rtlwifi-new/0.6
 ```
-Settings for the antenna:
-
-    ❯ sudo modprobe -r rtl8723de && sudo modprobe rtl8723de ant_sel=2
 
 ## Accessing the AUR
 
@@ -209,11 +211,53 @@ I am going to install my build of [DWM](https://wiki.archlinux.org/index.php/Dwm
 
     ❯ sudo pacman -S ttf-font-awesome ttf-dejavu
 
-I'm cloning all my suckless builds, config files and scripts from my github. My scripts may or may not work on your machine, as some of them are specific to the hardware in my laptop.
-    
-    ❯ git clone https://github.com/laszloszurok/suckless-arch.git
+I'm cloning all my suckless builds, config files and scripts from my github. I'm using a git bare repository to manage my config- and other files in my home folder. 
 
-Move the content of the cloned directory directly to you home folder, then go into the folder suckless-builds/dwm and execute the following command:
+If you want my configs just clone the repo from the below link as you normally would and then place it's content in your home folder manually. 
+
+My scripts may or may not work on your machine, as some of them are specific to the hardware in my laptop.
+
+So in my case:
+```
+❯ git clone --separate-git-dir=$HOME/.myconf https://github.com/laszloszurok/suckless-arch.git $HOME/myconf-tmp
+```
+```
+❯ rm -r ~/myconf-tmp/
+```
+```
+❯ alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
+```
+```
+❯ config config status.showUntrackedFiles no
+```
+
+The .myconf folder will be the bare repo. This is a great way of managing config files, because you can basicly forget about it after the setup. You don't have to deal with the .myconf folder, just leave it there in your home directory. With the alias, you can use commands like this to manage your files:
+```
+❯ config status
+```
+```
+❯ config add .bashrc
+```
+```
+❯ config commit -m "updated .bashrc"
+```
+```
+❯ config push
+```
+Write this alias in your .bashrc or .zshrc to make it permanent. Obviously, if you want to manage your files like this, you have to set up your own git repo, because you can't push to mine. You can do this with these commands:
+```
+❯ git init --bare $HOME/.myconf
+```
+```
+❯ alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
+```
+```
+❯ config config status.showUntrackedFiles no
+```
+
+Then you have to add your own remote to the repository. 
+
+Now go into the suckless-builds/dwm directory and execute the following command:
 
     ❯ sudo make install
 
@@ -283,3 +327,34 @@ Install it with the following command:
     ❯ yay -S lightdm-settings
 
 After you reboot, you should see the lightdm-slick-greeter login screen and DWM should automatically start after you log in.
+
+Now I'm going to apply a nice dark theme for the system. My favourite dark theme is ArcDark, whit the Arc icon-theme. Install these with the following command:
+
+```
+❯ sudo pacman -S arc-gtk-theme arc-icon-theme
+```
+
+The tools I'm using for managing themes are lxappearance for GTK and kvantum for QT. Install them:
+
+```
+❯ sudo pacman -S lxappearance kvantum-qt5
+```
+
+Set your themes as you like, the arc-gtk-theme contains multiple color variations, and there are loads of kvantum themes as well.
+
+## Configuring the touchpad
+
+Now I'm going to configure the touchpad of my laptop, because tap-to-click and natural scrolling are turned off by default. Create a file called 30-touchpad.conf and place it to /etc/X11/xorg.conf.d/ . Write these settings into it:
+
+```text
+Section "InputClass"
+    Identifier "touchpad"
+    Driver "libinput"
+    MatchIsTouchpad "on"
+    Option "Tapping" "on"
+    Option "NaturalScrolling" "true"
+EndSection
+```
+
+Restart the X server for the changes to take effect.
+

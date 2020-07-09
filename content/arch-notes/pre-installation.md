@@ -2,6 +2,9 @@
 title: "Pre-Installation"
 date: 2020-07-04T17:09:50+02:00
 draft: false
+tags:
+  - arch
+  - pre-install
 ---
 ## Connecting to the internet
 
@@ -79,8 +82,3 @@ If you created a swap partiton:
 
     ❯ swapon /path/to/swap/partition
 
-## Generating the filesystem table
-
-Creating the [fstab](https://wiki.archlinux.org/index.php/Fstab) file:
-
-    ❯ genfstab -U /mnt >> /mnt/etc/fstab
