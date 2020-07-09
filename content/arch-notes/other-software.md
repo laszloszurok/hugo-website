@@ -35,7 +35,7 @@ The last command will take you back directly inside the directory called child-f
 
 ## Spotify settings
 
-I have a workspace deticated to Spotify in my DWM build. By default Spotify is not following the rules specified in DWM's config.h file, so the window won't be moved to the right workspace. Here's the fix for this problem:
+I have a workspace deticated to Spotify in my DWM build. By default Spotify is not following the rules specified in DWM's config.h file, so the window won't be moved to the right workspace when you launch the program. Here's the fix for this problem:
 
 Install a little program called spotifywm. This will help us to give Spotify a classname when it starts up, so DWM will be able to apply the rules to the Spotify window.
 
