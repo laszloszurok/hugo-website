@@ -1,0 +1,34 @@
+.header {
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 100;
+}
+
+@media only screen and (max-width: 684px) {
+    .posts {
+        margin-top: 45px;
+    }
+}
+
+
+.post {
+  width: 100%;
+  max-width: 800px;
+  text-align: left;
+  padding: 20px;
+  padding-top: 50px;
+  margin: 20px auto;
+  @media #{$media-size-tablet} {
+    max-width: 600px;
+  }
+}
+
+.footer__content {
+    font-size: 0.8em;
+}
