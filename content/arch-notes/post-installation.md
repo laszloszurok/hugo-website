@@ -360,7 +360,7 @@ Restart the X server for the changes to take effect.
 
 ## Enabling sound
 
-I'm using [ALSA](https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture) to enable sound on my machine. Install alsa-utils with the following command. This will provede a program called alsa-mixer which you can use to control sound.
+I'm using [ALSA](https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture) to enable sound on my machine. Install alsa-utils with the following command. This will provide a program called alsa-mixer which you can use to control sound.
 ```
 ❯ sudo pacman -S alsa-utils
 ```
