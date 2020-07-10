@@ -69,3 +69,48 @@ Change the shell for the current user:
 ```
 ❯ chsh -s /usr/bin/zsh
 ```
+
+## Pywal color genearation
+
+I like to add some extra prettiness to my window manager. [Pywal](https://github.com/dylanaraps/pywal) can generate colors based on your wallpaper and you can use them in your configuration files to have a unified colorscheme across your system. It will also set your terminal colors.
+
+Install it from the AUR:
+```
+❯ yay -S python-pywal
+```
+You also need a utility to set a chosen image as your wallpaper. I'm using [feh](https://wiki.archlinux.org/index.php/Feh).
+```
+❯ sudo pacman -S feh
+```
+Run the following command to set your wallpaper and generate your colors:
+```
+❯ wal -i /path/to/an/image
+```
+Your terminal colors will be set automatically, but not permanently. To apply the colors for every new terminal window, you have to add the following line to your .bashrc or .zshrc file:
+```bash
+(cat ~/.cache/wal/sequences &)
+```
+Now configure DWM to use the generated colors. Open the config.h file and delete or comment out the following lines:
+```c
+static const char col_gray1[]       = "#222222";
+static const char col_gray2[]       = "#444444";
+static const char col_gray3[]       = "#bbbbbb";
+static const char col_gray4[]       = "#eeeeee";
+static const char col_cyan[]        = "#005577";
+static const char *colors[][3]      = {
+	/*               fg         bg         border   */
+	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+};
+```
+Replace them with this single line:
+```c
+#include "/home/<USER>/.cache/wal/colors-wal-dwm.h"
+```
+Replace \<USER\> with your username. 
+
+You have to reinstall DWM to apply the changes:
+```
+❯ sudo make clean install
+```
+Now restart DWM to see the new colors.
