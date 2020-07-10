@@ -114,3 +114,8 @@ You have to reinstall DWM to apply the changes:
 ❯ sudo make clean install
 ```
 Now restart DWM to see the new colors.
+
+## Dunst
+
+[Dunst](https://wiki.archlinux.org/index.php/Dunst) is a little program for showing notifications on the desktop.
+My configuration file for it is on my [github page](https://github.com/laszloszurok/suckless-arch/tree/master/.config/dunst). There is a little script as well, which will apply pywal generated colors for the notifications. You have to autostart this script for the colors to be applied. My DWM build has the autostart patch and executes this script when you log in.
