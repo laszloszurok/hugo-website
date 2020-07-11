@@ -213,7 +213,7 @@ I am going to install my build of [DWM](https://wiki.archlinux.org/index.php/Dwm
 
 I'm cloning all my suckless builds, config files and scripts from my github. I'm using a git bare repository to manage my config- and other files in my home folder. 
 
-If you want my configs just clone the repo from the below link as you normally would and then place it's content in your home folder manually. 
+If you want my configs just clone the repo from the below link as you normally would and then place it's content in your home folder. 
 
 My scripts may or may not work on your machine, as some of them are specific to the hardware in my laptop.
 
@@ -221,8 +221,13 @@ So in my case:
 ```
 ❯ git clone --separate-git-dir=$HOME/.myconf https://github.com/laszloszurok/suckless-arch.git $HOME/myconf-tmp
 ```
+This clones my files to a temporary directory and creates a bare repo in my home folder. We need the temporary directory because if the home folder is not empty we can't clone directly into it with this command. Now we have to move the files from myconf-tmp to the home folder:
 ```
-❯ rm -r ~/myconf-tmp/
+❯ mv ~/myconf-tmp/* ~/myconf-tmp/.[!.]* ~/
+```
+This moves every file - including hidden ones - to the home dir. We don't need the tmp folder anymore and there is a .git file that we can remove too:
+```
+❯ rm -r ~/myconf-tmp/ ~/.git
 ```
 ```
 ❯ alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
