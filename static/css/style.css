@@ -1,5 +1,9 @@
+html, body {
+    scroll-padding-top: 90px;
+}
+
 .header {
-  background: #fafafa;
+  background: #f3f3f3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,12 +14,31 @@
   z-index: 100;
 }
 
+.menu__inner {
+    background: #f3f3f3;
+}
+
+.dark-theme .menu__inner {
+    background: #252627;
+}
+
+.header__inner {
+    width: 100%
+}
+
+.main-container {
+  flex: 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
 @media only screen and (max-width: 684px) {
     .posts {
         margin-top: 45px;
     }
 }
-
 
 .post {
   width: 100%;
@@ -28,7 +51,9 @@
     max-width: 600px;
   }
 }
-
+.next-prev-post {
+    margin-top: 20px;
+}
 .footer__content {
     font-size: 0.8em;
 }
