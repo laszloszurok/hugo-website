@@ -1,5 +1,29 @@
 {{ define "main" }}
-  <main class="post">
+<div class="container" >
+    <div class="row">
+        
+      {{- if .Params.toc }}
+        <div class="col-sm-1 col-md-4 col-lg-3 col-xl-1" id="sticky-sidebar">
+            <div class="sticky-top pt-5">
+
+                <!-- spacer -->
+                <div class="pt-5"></div>
+                    
+                <div class="sidebar-bg">
+                    <div class="nav flex-column">
+                        <div class="toc-title">{{ i18n "tableOfContents" }}</div>
+                        <hr>
+                        <aside id="toc">
+                            {{ .TableOfContents }}
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      {{- end }}
+
+      <main class="col-lg-7 post">
 
     <div class="post-info">
       <p>
@@ -21,15 +45,6 @@
       <h1 class="post-title">
         <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
       </h1>
-
-      {{- if .Params.toc }}
-        <hr />
-        <aside id="toc">
-          <div class="toc-title">{{ i18n "tableOfContents" }}</div>
-          {{ .TableOfContents }}
-        </aside>
-        <hr />
-      {{- end }}
 
       {{ with .Params.Cover }}
         <img src="/{{ . }}" class="post-cover" />
@@ -99,7 +114,7 @@
     {{- end }}
 
     {{ if and (not $.Site.Params.DisableReadOtherPosts) (or .NextInSection .PrevInSection) }}
-      <div class="pagination">
+      <div class="next-prev-post">
         <div class="pagination__title">
           <span class="pagination__title-h">{{ .Site.Params.ReadOtherPosts }}</span>
           <hr />
@@ -137,4 +152,6 @@
     {{ end }}
 
   </main>
+  </div>
+</div>
 {{ end }}
