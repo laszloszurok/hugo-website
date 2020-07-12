@@ -2,7 +2,7 @@
 title: "Installation"
 date: 2020-07-03T10:12:02+02:00
 draft: false
-toc: false
+toc: true
 images:
 tags:
   - arch
@@ -13,8 +13,9 @@ More info on the [wiki](https://wiki.archlinux.org/index.php/Installation_guide)
 ## Setting up the mirrorlist
 
 For faster download speeds choose the appropriate mirrors based on your country. I'm going to use vim to edit the [mirrorlist](https://wiki.archlinux.org/index.php/Mirrors) file.
-
-    ❯ vim /etc/pacman.d/mirrorlist
+```text
+❯ vim /etc/pacman.d/mirrorlist
+```
 
 Search for your country and move the lines to the top of the file (uncomment them). Save the file and exit the texteditor.
 
@@ -22,4 +23,6 @@ Search for your country and move the lines to the top of the file (uncomment the
 
 Install the necessary packages and a texteditor of your preference.
 
-    ❯ pacstrap /mnt base linux linux-firmware vim
+```text
+❯ pacstrap /mnt base linux linux-firmware vim
+```
