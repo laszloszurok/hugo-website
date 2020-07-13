@@ -13,20 +13,20 @@ tags:
 
 The [z program](https://github.com/rupa/z) will make your life easier on the command line. Installation:
 
-```text
+```terminal
 ❯ git clone https://github.com/rupa/z ~/z
 ```
-```text
+```terminal
 ❯ mkdir ~/.cache/z
 ```
-```text
+```terminal
 ❯ echo ". ~/z/z.sh" >> ~/.zshrc
 ```
-```text
+```terminal
 ❯ exec $SHELL
 ```
 Use it like this:
-```text
+```terminal
 ❯ cd grandparent-folder/parent-folder/child-folder
 ❯ cd different/path/to/another/folder
 ❯ z child-folder
@@ -39,13 +39,13 @@ I have a workspace deticated to Spotify in my DWM build. By default Spotify is n
 
 Install a little program called spotifywm. This will help us to give Spotify a classname when it starts up, so DWM will be able to apply the rules to the Spotify window.
 
-```text
+```terminal
 ❯ git clone https://github.com/dasJ/spotifywm.git
 ```
-```text
+```terminal
 ❯ cd spotifywm
 ```
-```text
+```terminal
 ❯ make
 ```
 
@@ -62,11 +62,11 @@ Replace \<USERNAME\> with your username, then save the file and make it executab
 ## Changing the default shell to zsh
 
 Install zsh:
-```text
+```terminal
 ❯ sudo pacman -S zsh
 ```
 Change the shell for the current user:
-```text
+```terminal
 ❯ chsh -s /usr/bin/zsh
 ```
 
@@ -75,15 +75,15 @@ Change the shell for the current user:
 I like to add some extra prettiness to my window manager. [Pywal](https://github.com/dylanaraps/pywal) can generate colors based on your wallpaper and you can use them in your configuration files to have a unified colorscheme across your system. It will also set your terminal colors.
 
 Install it from the AUR:
-```text
+```terminal
 ❯ yay -S python-pywal
 ```
 You also need a utility to set a chosen image as your wallpaper. I'm using [feh](https://wiki.archlinux.org/index.php/Feh).
-```text
+```terminal
 ❯ sudo pacman -S feh
 ```
 Run the following command to set your wallpaper and generate your colors:
-```text
+```terminal
 ❯ wal -i /path/to/an/image
 ```
 Your terminal colors will be set automatically, but not permanently. To apply the colors for every new terminal window, you have to add the following line to your .bashrc or .zshrc file:
@@ -110,7 +110,7 @@ Replace them with this single line:
 Replace \<USER\> with your username. 
 
 You have to reinstall DWM to apply the changes:
-```text
+```terminal
 ❯ sudo make clean install
 ```
 Now restart DWM to see the new colors.
