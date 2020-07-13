@@ -3,7 +3,7 @@ html, body {
 }
 
 .header {
-  background: #f3f3f3;
+  background: #f1f1f1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,16 +14,20 @@ html, body {
   z-index: 100;
 }
 
-.menu__inner {
-    background: #f3f3f3;
+.menu {
+    background: #f1f1f1;
 }
 
-.dark-theme .menu__inner {
+.dark-theme .menu {
     background: #252627;
 }
 
 .header__inner {
     width: 100%
+}
+
+.outer-div {
+    margin-top: 5rem;
 }
 
 .main-container {
@@ -51,9 +55,33 @@ html, body {
     max-width: 600px;
   }
 }
+
+.language-terminal {
+    background: #f1f1f1!important;
+    color: #222!important;
+    margin: 20px 0 20px 0!important;
+}
+
+.dark-theme .language-terminal {
+    background: #252627!important;
+    color: #a9a9b3!important;
+}
+
+.language-bash, .language-text, .language-c {
+    background: #444!important;
+    color: #d1d1d1!important;
+    margin: 20px 0 20px 0!important;
+}
+
+.dark-theme .language-bash, .dark-theme .language-text, .dark-theme .language-c{
+    background: #333!important;
+    color: #cfcfcf!important;
+}
+
 .next-prev-post {
     margin-top: 20px;
 }
+
 .footer__content {
     font-size: 0.8em;
 }

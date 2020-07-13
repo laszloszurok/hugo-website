@@ -23,6 +23,8 @@
 
 #toc a {
     text-decoration: none;
+    display: block;
+    width: 100%;
 }
 
 .dark-theme #toc li:hover{
