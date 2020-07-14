@@ -235,7 +235,7 @@ I am going to install my build of [DWM](https://wiki.archlinux.org/index.php/Dwm
 ❯ sudo pacman -S ttf-font-awesome ttf-dejavu
 ```
 
-I'm cloning all my suckless builds, config files and scripts from my github. I'm using a git bare repository to manage my config- and other files in my home folder. 
+I'm cloning all my [suckless builds](https://suckless.org/), config files and scripts from my github. I'm using a git bare repository to manage my config- and other files in my home folder. 
 
 If you want my configs just clone the repo from the below link as you normally would and then place its content to your home folder. 
 
@@ -301,7 +301,7 @@ Replace 'youruser' with your username. Open the copied file and delete the last 
 exec dwm
 ```
 
-Save the file and exit the editor. Now you should be able to launch dwm with the following command:
+Save the file and exit the editor. Now you should be able to launch dwm with this command:
 ```terminal
 ❯ startx
 ```
@@ -375,7 +375,7 @@ The tools I'm using for managing themes are lxappearance for GTK and qt5ct for Q
 ```terminal
 ❯ sudo pacman -S lxappearance qt5ct
 ```
-For qt5ct to work, we have to set an enviromental variable in /etc/enviroment. Open the file and add this line:
+For qt5ct to work, we have to set an environmental variable in /etc/environment. Open the file and add this line:
 ```text
 QT_QPA_PLATFORMTHEME=qt5ct
 ```
@@ -399,7 +399,7 @@ Restart the X server for the changes to take effect.
 
 ## Enabling sound
 
-I'm using [ALSA](https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture) to enable sound on my machine. Install alsa-utils with the following command. This will provide a program called alsa-mixer which you can use to control sound.
+I'm using the [ALSA](https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture) sound system on my machine. Install alsa-utils with the following command. This will provide a program called alsa-mixer which you can use to control sound.
 ```terminal
 ❯ sudo pacman -S alsa-utils
 ```
