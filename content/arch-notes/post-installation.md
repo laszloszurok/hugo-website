@@ -206,7 +206,7 @@ a software called an AUR helper to be able to install packages from this repo. M
 ❯ makepkg -si
 ``` 
 
-## Setting up a graphical enviroment (xorg)
+## Setting up a graphical environment (xorg)
 
 First of all we are going to install graphical drivers.
 
