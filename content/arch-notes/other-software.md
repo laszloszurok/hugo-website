@@ -119,3 +119,57 @@ Now restart DWM to see the new colors.
 
 [Dunst](https://wiki.archlinux.org/index.php/Dunst) is a little program for showing notifications on the desktop.
 My configuration file for it is on my [github page](https://github.com/laszloszurok/suckless-arch/tree/master/.config/dunst). There is a little script as well, which will apply pywal generated colors for the notifications. You have to autostart this script for the colors to be applied. My DWM build has the autostart patch and executes this script when you log in.
+
+## Vifm
+
+[Vifm](https://wiki.archlinux.org/index.php/Vifm) is a terminal file manager. It uses vim like keybindings. 
+You can set [color schemes](https://vifm.info/colorschemes.shtml) for it, my favourite is the palenight theme. To apply a theme, download and place it
+inside .config/vifm/colors/ . Then open .config/vifm/vifmrc and add this line:
+```text
+colorscheme palenight
+```
+By default vifm won't show image previews. To make that work, you need to add the following configuration to vifmrc:
+```text
+fileviewer *.pdf
+    \ vifmimg pdfpreview %px %py %pw %ph %c
+    \ %pc
+    \ vifmimg clear
+
+fileviewer *.epub
+    \ vifmimg epubpreview %px %py %pw %ph %c
+    \ %pc
+    \ vifmimg clear
+
+fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
+    \*.fl[icv],*.m2v,*.mov,*.webm,*.ts,*.mts,*.m4v,*.r[am],*.qt,*.divx,
+    \ vifmimg videopreview %px %py %pw %ph %c
+    \ %pc
+    \ vifmimg clear
+
+fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.xpm
+    \ vifmimg draw %px %py %pw %ph %c
+    \ %pc
+    \ vifmimg clear
+
+fileviewer *.gif
+    \ vifmimg gifpreview %px %py %pw %ph %c
+    \ %pc
+    \ vifmimg clear
+
+fileviewer *.ico
+    \ vifmimg magickpreview %px %py %pw %ph %c
+    \ %pc
+    \ vifmimg clear
+        
+fileviewer <audio/*>
+    \ vifmimg audiopreview %px %py %pw %ph %c
+    \ %pc
+    \ vifmimg clear
+        
+fileviewer <font/*>
+    \ vifmimg fontpreview %px %py %pw %ph %c
+    \ %pc
+    \ vifmimg clear
+```
+Then clone this repo: <https://github.com/cirala/vifmimg> and place the vifmimg and vifmrun scripts in a folder that is included in your $PATH variable.
+From now on, you have to launch vifm with the vifmrun script to have image-, pdf-, video thumbnail-, etc. previews. For faster access: alias vf=vifmrun.
