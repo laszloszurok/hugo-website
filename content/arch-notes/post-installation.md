@@ -375,11 +375,11 @@ The tools I'm using for managing themes are lxappearance for GTK and qt5ct for Q
 ```terminal
 ❯ sudo pacman -S lxappearance qt5ct
 ```
-For qt5ct to work, we have to set an environmental variable in /etc/environment. Open the file and add this line:
+To apply the themes globally, add these [environmental variables](https://wiki.archlinux.org/index.php/Environment_variables) to /etc/environment:
 ```text
+GTK_THEME=Arc-Dark
 QT_QPA_PLATFORMTHEME=qt5ct
 ```
-You can set up different color variations in these theme engines for your programs.
 
 ## Configuring the touchpad
 
