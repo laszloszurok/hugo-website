@@ -13,10 +13,10 @@
                 <div class="post-year">{{ .Key }}</div>
 
                 <ul class="posts-list">
-                    {{ range .Pages }}
+                    {{ range $elem_index, $elem_value := .Pages }}
                         <li class="post-item">
                             <a href="{{.Permalink}}">
-                                <span class="post-title">{{.Title}}</span>
+                                <span class="post-title">{{ add $elem_index 1 }}) {{.Title}}</span>
                             </a>
                         </li>
                     {{ end }}
