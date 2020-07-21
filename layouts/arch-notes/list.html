@@ -1,0 +1,38 @@
+{{ define "main" }}
+    {{ $paginator := .Paginate .Data.Pages }}
+    
+    <main class="posts">
+        <h1>{{ .Title }}</h1>
+        
+        
+        {{ if .Content }}
+            <div class="content">{{ .Content }}</div>
+        {{ end }}
+
+        {{ range $paginator.Pages.GroupByDate "2006" }}
+            <div class="posts-group">
+                <div class="post-year">{{ .Key }}</div>
+
+                <ul class="posts-list">
+                    {{ range .Pages }}
+                        <li class="post-item">
+                            <a href="{{.Permalink}}">
+                                <span class="post-title">{{.Title}}</span>
+                            </a>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+        {{ end }}
+        <br>
+        <p>
+        These are my setup notes for Arch Linux from the installation process to setting up a graphical enviroment using my DWM build. You can also find some screenshots of the final looks.
+        </p>
+        <p>
+        This is not a proper installation guide, just notes for myself, specifically the laptop I am using, so there could be steps that you don't have to follow.
+        For more information on each step I placed links to the Arch Wiki.
+        </p>
+
+    {{ partial "pagination.html" . }}
+    </main>
+{{ end }}
