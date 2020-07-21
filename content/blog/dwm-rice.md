@@ -3,6 +3,10 @@ title: "How to customize dwm"
 date: 2020-07-20T17:28:04+02:00
 toc: true
 draft: false
+tags:
+ - dwm
+ - rice
+ - tutorial
 ---
 This tutorial will go over how to customize DWM. I'm going to use my own DWM build as an example. If you want to see the final looks of the setup
 I'm going to build here, you can check it out [here](/arch-notes/screenshots).
