@@ -124,5 +124,9 @@ disableHugoGeneratorInject = false
 [menu]
   [[menu.main]]
     identifier = "arch-notes"
-    name       = "My Arch Linux Notes"
+    name       = "Arch-notes"
     url        = "/arch-notes"
+  [[menu.main]]
+    identifier = "blog"
+    name       = "Blog"
+    url        = "/blog"
