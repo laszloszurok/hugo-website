@@ -122,7 +122,7 @@ if (occ & 1 << i)
 		urg & 1 << i);
 ```
 
-## Icons in the bar
+## Font Awesome
 In my build, I'm using Font Awesome icons in the statusbar. They look very good in my opinion and there's a lot of them accessible for free. 
 Here is a [cheat sheet](https://fontawesome.com/cheatsheet/free/solid) where you can copy the icons from. To be able to display Font Awesome 
 icons in your statusbar, or anywhere else on you system, you need to install the Font Awsome package for your operating system.
