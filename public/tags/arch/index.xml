@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>arch on László Szurok</title>
+    <link>https://laszloszurok.github.io/tags/arch/</link>
+    <description>Recent content in arch on László Szurok</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sat, 04 Jul 2020 17:09:50 +0200</lastBuildDate>
+    
+	<atom:link href="https://laszloszurok.github.io/tags/arch/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pre-Installation</title>
+      <link>https://laszloszurok.github.io/arch-notes/pre-installation/</link>
+      <pubDate>Sat, 04 Jul 2020 17:09:50 +0200</pubDate>
+      
+      <guid>https://laszloszurok.github.io/arch-notes/pre-installation/</guid>
+      <description>Connecting to the internet I have a wireless card in my laptop, but it is not working in a live enviroment due to driver problems. I am going to fix it after the installation. For now I&amp;rsquo;m going to use my phone to share its wifi connection with the machine through usb. For this to work we need to start a program called dhcpcd.
+❯ dhcpcd Now you can plug in your phone and share its internet connection with the laptop.</description>
+    </item>
+    
+    <item>
+      <title>Installation</title>
+      <link>https://laszloszurok.github.io/arch-notes/installation/</link>
+      <pubDate>Fri, 03 Jul 2020 10:12:02 +0200</pubDate>
+      
+      <guid>https://laszloszurok.github.io/arch-notes/installation/</guid>
+      <description>More info on the wiki.
+Setting up the mirrorlist For faster download speeds choose the appropriate mirrors based on your country. I&amp;rsquo;m going to use vim to edit the mirrorlist file.
+❯ vim /etc/pacman.d/mirrorlist Search for your country and move the lines to the top of the file (uncomment them). Save the file and exit the texteditor.
+Installing the base system Install the necessary packages and a texteditor of your preference.</description>
+    </item>
+    
+    <item>
+      <title>Post-Installation</title>
+      <link>https://laszloszurok.github.io/arch-notes/post-installation/</link>
+      <pubDate>Thu, 02 Jul 2020 10:14:55 +0200</pubDate>
+      
+      <guid>https://laszloszurok.github.io/arch-notes/post-installation/</guid>
+      <description>Generating the filesystem table Creating the fstab file:
+❯ genfstab -U /mnt &amp;gt;&amp;gt; /mnt/etc/fstab Chroot into the installed system With the chroot command you leave the live enviroment and enter the newly installed system.
+❯ arch-chroot /mnt Timezone and locale Choose your timezone:
+❯ ln -sf /usr/share/zoneinfo/Europe/Budapest /etc/localtime Run hwclock to generate /etc/adjtime:
+❯ hwclock --systohc Uncomment the needed locales in /etc/locale.gen (in my case en_US.UTF-8):
+❯ vim /etc/locale.gen Generate the locales:</description>
+    </item>
+    
+  </channel>
+</rss>

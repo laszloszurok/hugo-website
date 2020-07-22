@@ -1,0 +1,72 @@
+html, body {
+    scroll-padding-top: 87px;
+    background: #d4d4d4;
+}
+
+.header {
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 100;
+}
+
+.menu {
+    background: #f0f0f0;
+}
+
+.dark-theme .menu {
+    background: #252627;
+}
+
+.header__inner {
+    width: 100%
+}
+
+.outer-div {
+    margin-top: 5rem;
+}
+
+.main-container {
+  flex: 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+@media only screen and (max-width: 684px) {
+    .posts {
+        margin-top: 45px;
+    }
+}
+
+.post {
+  width: 100%;
+  max-width: 800px;
+  text-align: left;
+  padding: 20px;
+  padding-top: 50px;
+  margin: 20px auto;
+}
+
+.language-terminal {
+    background: #252627!important;
+    margin: 20px 0 20px 0!important;
+}
+
+.language-bash, .language-text, .language-c {
+    margin: 20px 0 20px 0!important;
+}
+
+.next-prev-post {
+    margin-top: 20px;
+}
+
+.footer__content {
+    font-size: 0.8em;
+}
