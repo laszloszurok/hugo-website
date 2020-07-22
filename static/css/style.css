@@ -1,9 +1,10 @@
 html, body {
     scroll-padding-top: 87px;
+    background: #d4d4d4;
 }
 
 .header {
-  background: #f1f1f1;
+  background: #f0f0f0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,7 +16,7 @@ html, body {
 }
 
 .menu {
-    background: #f1f1f1;
+    background: #f0f0f0;
 }
 
 .dark-theme .menu {
@@ -51,31 +52,15 @@ html, body {
   padding: 20px;
   padding-top: 50px;
   margin: 20px auto;
-  @media #{$media-size-tablet} {
-    max-width: 600px;
-  }
 }
 
 .language-terminal {
-    background: #f1f1f1!important;
-    color: #222!important;
-    margin: 20px 0 20px 0!important;
-}
-
-.dark-theme .language-terminal {
     background: #252627!important;
-    color: #a9a9b3!important;
+    margin: 20px 0 20px 0!important;
 }
 
 .language-bash, .language-text, .language-c {
-    background: #444!important;
-    color: #d1d1d1!important;
     margin: 20px 0 20px 0!important;
-}
-
-.dark-theme .language-bash, .dark-theme .language-text, .dark-theme .language-c{
-    background: #333!important;
-    color: #cfcfcf!important;
 }
 
 .next-prev-post {

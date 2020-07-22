@@ -265,7 +265,7 @@ static Key keys[] = {
 If you want to display the curent volume level on the status bar, it will update when you raise or lover the volume with the built-in keys (I have these keys on my laptop).
 
 This part:
-```text
+```bash
 pkill -RTMIN+10 dwmblocks
 ```
 is the command which updates only the volume indicator. -RTMIN+10 means the indicator with the signal number of 10. (The number you set in dwmblocks/blocks.h)

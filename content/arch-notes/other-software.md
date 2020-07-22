@@ -125,11 +125,11 @@ My configuration file for it is on my [github page](https://github.com/laszloszu
 [Vifm](https://wiki.archlinux.org/index.php/Vifm) is a terminal file manager. It uses vim like keybindings. 
 You can set [color schemes](https://vifm.info/colorschemes.shtml) for it, my favourite is the palenight theme. To apply a theme, download and place it
 inside .config/vifm/colors/ . Then open .config/vifm/vifmrc and add this line:
-```text
+```vim
 colorscheme palenight
 ```
 By default vifm won't show image previews. To make that work, you need to add the following configuration to vifmrc:
-```text
+```vim
 fileviewer *.pdf
     \ vifmimg pdfpreview %px %py %pw %ph %c
     \ %pc
