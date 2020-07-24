@@ -23,7 +23,7 @@ an expert in C to use DWM, but knowing a bit about the languege will defenetly h
 ## Get the source code
 Clone the source code of DWM to your computer with the following command:
 ```terminal
-❯ git clone https://git.suckless.org/dwm
+git clone https://git.suckless.org/dwm
 ```
 
 ## Pre-configuration
@@ -100,7 +100,7 @@ The first patch I'm going to apply is called [dwm-restartsig](https://dwm.suckle
 What I mean by this is you do not have to restart your X session by logging out, you can just refresh dwm, so for e.g. if you make some changes in your status bar,
 you can see the changes instantly after the refresh. Use the patch command to apply pathces like this:
 ```terminal
-❯ sudo patch -p1 < dwm-restartsig-20180523-6.2.diff
+sudo patch -p1 < dwm-restartsig-20180523-6.2.diff
 ```
 After you have the restartsig patch, rebuild dwm. You have to restart it manually now, but after that, you can use the Mod+ctrl+shift+q keycombination to refresh dwm. No more logouts.
 
@@ -129,7 +129,7 @@ Here is a [cheat sheet](https://fontawesome.com/cheatsheet/free/solid) where you
 icons in your statusbar, or anywhere else on you system, you need to install the Font Awsome package for your operating system.
 On Arch linux the following command installs the font:
 ```terminal
-❯ sudo pacman -S ttf-font-awesome
+sudo pacman -S ttf-font-awesome
 ```
 You may have to reboot your computer to be able to see the icons once you copy them from the cheat sheet.
 
@@ -182,7 +182,7 @@ This solution is easier on system resources as there's no unnecessary updates.
 
 Get the source code:
 ```terminal
-❯ git clone https://github.com/torrinfail/dwmblocks.git
+git clone https://github.com/torrinfail/dwmblocks.git
 ```
 Edit the blocks.h file to add your status indicators. I have these scripts in the statusbar:
 ```c
@@ -275,7 +275,7 @@ is the command which updates only the volume indicator. -RTMIN+10 means the indi
 I am using a program called [pywal](https://github.com/dylanaraps/pywal), that generates colors based on your wallpaper. I use these colors in my dwm configurations. 
 On Arch you can install pywal with the following command:
 ```terminal
-❯ sudo pacman -S python-pywal
+sudo pacman -S python-pywal
 ```
 Now configure dwm to use the generated colors. Open config.def.h and locate the following part:
 ```c
@@ -306,7 +306,7 @@ This is needed becouse pywal generates different border colors for urgent window
 
 Now run the following command to actually set your wallpaper and generate the colors:
 ```terminal
-❯ wal -i path/to/an/image
+wal -i path/to/an/image
 ```
 Then rebuild and restart dwm.
 
@@ -323,7 +323,7 @@ This will always restore the last wallpaper you set.
 ## Gaps
 I am using the [tilegap](https://dwm.suckless.org/patches/tilegap/) patch to have some gap around the windows in tiling mode. Download, then apply it like this:
 ```terminal
-❯ sudo patch -p1 < dwm-tilegap-6.2.diff
+sudo patch -p1 < dwm-tilegap-6.2.diff
 ```
 Then you can set the gapsize in config.def.h like this:
 ```c
