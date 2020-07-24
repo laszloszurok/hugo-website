@@ -59,6 +59,11 @@ html, body {
     margin: 20px 0 20px 0!important;
 }
 
+pre.language-terminal::before {
+    content: '❯';
+    padding-right: 10px;
+}
+
 .language-bash, .language-text, .language-c {
     margin: 20px 0 20px 0!important;
 }
