@@ -3,7 +3,7 @@ title: "Installation"
 date: 2020-07-03T10:12:02+02:00
 draft: false
 toc: true
-images:
+summary: "Contents of this post: Setting up the mirrorlist, Installing the base system"
 tags:
   - arch
   - installation

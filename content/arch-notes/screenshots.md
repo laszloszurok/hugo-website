@@ -2,7 +2,13 @@
 title: "Screenshots"
 date: 2020-04-14T20:48:38+02:00
 toc: true
+summary: "Contents of this post: Screenshots of my installed system and programs."
 draft: false
+tags:
+  - vifm
+  - spotify
+  - unixporn
+  - desktop
 ---
 
 ## Vifm filemanager

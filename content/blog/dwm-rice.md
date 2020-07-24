@@ -3,6 +3,7 @@ title: "How to customize dwm"
 date: 2020-07-20T17:28:04+02:00
 toc: true
 draft: false
+summary: "This tutorial will go over how to customize DWM. I'm going to use my own DWM build as an example. This post was made for a request from a Reddit user after I posted an image of my Arch linux setup in [r/unixporn](https://www.reddit.com/r/unixporn/)."
 tags:
  - dwm
  - rice

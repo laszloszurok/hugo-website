@@ -3,7 +3,7 @@ title: "Setting up my most used programs"
 date: 2020-05-09T18:32:02+02:00
 draft: false
 toc: true
-images:
+summary: "Contents of this post: Settings and configurations for my most used programs (z, zsh, vifm, pywal, etc.)"
 tags:
   - software
   - setup
