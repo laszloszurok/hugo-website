@@ -222,17 +222,16 @@ Then we have to patch dwmblocks to finally have the click functionality. The pat
 only need the statuscmd-signal for dwm and the dwmblocks-statucmd for dwmblocks).
 Download and apply it, then install dwmblocks.
 
-Now you can write little status scripts and handle click events in them. Here is my wifi script as an example (sorry if the icons won't render correctly, I've yet 
-to set up font awesome properly on my website):
+Now you can write little status scripts and handle click events in them. Here is my wifi script as an example:
 ```bash
 #!/bin/sh
 
-icon=""
+icon={{< fontawesome wifi >}}
 essid=`iwgetid wlo1 --raw`
 signal=`awk 'NR==3 {printf("%.0f%%",$3*10/7)}' /proc/net/wireless`
 
 if [ -z "$essid" ]; then
-    icon=""
+    icon={{< fontawesome sad-tear>}}
     essid="no wifi"
     signal=""
 fi
