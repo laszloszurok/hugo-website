@@ -78,8 +78,8 @@ index 1c0b587..b67825e 100644
 ```
 In this case it's config.def.h.
 
-Then the red line starting with a '-' symbol shows the state of the file before the patch is applied. So the patch assumes that in the original state of config.def.h
-the value of 'some_variable' is 0. The green line starting with a '+' symbol shows the state of the file after the patch. So basicly the red line is removed, the green
+Then the red line starting with a single '-' symbol shows the state of the file before the patch is applied. So the patch assumes that in the original state of config.def.h
+the value of *'some_variable'* is 0. The green line starting with a single '+' symbol shows the state of the file after the patch. So basicly the red line is removed, the green
 line is added.
 
 What if we apply multiple patches and some of them want to modify the same lines. If a patch is looking for this line:
