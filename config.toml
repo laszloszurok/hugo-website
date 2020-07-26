@@ -13,6 +13,8 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
 # googleAnalytics = ""
 # disqusShortname = ""
 
+pluralizelisttitles = "false"
+
 archetypeDir = "archetypes"
 contentDir   = "content"
 dataDir      = "data"
@@ -43,7 +45,7 @@ disableHugoGeneratorInject = false
   hrefTargetBlank = true
 
 #[taxonomies]
-# category = "blog"
+#  category = "blog"
 #  tag      = "tags"
 #  series   = "series"
 
