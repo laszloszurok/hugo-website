@@ -55,13 +55,20 @@ html, body {
 }
 
 .language-terminal {
-    background: #252627!important;
     margin: 20px 0 20px 0!important;
 }
 
-pre.language-terminal::before {
+code.language-terminal::before {
     content: '❯';
     padding-right: 10px;
+}
+
+.inline-svg {
+  display: inline-block;
+  height: 1.15rem;
+  width: 1.15rem;
+  top: 0.15rem;
+  position: relative;
 }
 
 .language-bash, .language-text, .language-c {
