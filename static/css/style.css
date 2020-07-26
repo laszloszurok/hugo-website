@@ -3,6 +3,8 @@ html, body {
     background: #d4d4d4;
 }
 
+/* Top menubar */
+
 .header {
   background: #f0f0f0;
   display: flex;
@@ -27,6 +29,8 @@ html, body {
     width: 100%
 }
 
+/* Content containers */
+
 .outer-div {
     margin-top: 5rem;
 }
@@ -39,12 +43,6 @@ html, body {
   text-align: center;
 }
 
-@media only screen and (max-width: 684px) {
-    .posts {
-        margin-top: 45px;
-    }
-}
-
 .post {
   width: 100%;
   max-width: 800px;
@@ -54,26 +52,30 @@ html, body {
   margin: 20px auto;
 }
 
+@media only screen and (max-width: 684px) {
+    .posts {
+        margin-top: 45px;
+    }
+}
+
+/* Code blocks and terminal commands */
+
 .language-terminal {
-    margin: 20px 0 20px 0!important;
+    margin: 20px 0 20px -5px!important;
 }
 
 code.language-terminal::before {
     content: '❯';
     padding-right: 10px;
-}
-
-.inline-svg {
-  display: inline-block;
-  height: 1.15rem;
-  width: 1.15rem;
-  top: 0.15rem;
-  position: relative;
+    position: relative;
+    top: -1px;
 }
 
 .language-bash, .language-text, .language-c {
     margin: 20px 0 20px 0!important;
 }
+
+/* End of posts and footer */
 
 .pagination__title-h {
     background: #d4d4d4;
@@ -85,4 +87,14 @@ code.language-terminal::before {
 
 .footer__content {
     font-size: 0.8em;
+}
+
+/* FontAwesome svgs */
+
+.inline-svg {
+  display: inline-block;
+  height: 1.15rem;
+  width: 1.15rem;
+  top: 0.15rem;
+  position: relative;
 }
