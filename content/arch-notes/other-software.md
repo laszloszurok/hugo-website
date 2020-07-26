@@ -28,7 +28,11 @@ exec $SHELL
 Use it like this:
 ```terminal
 cd grandparent-folder/parent-folder/child-folder
+```
+```terminal
 cd different/path/to/another/folder
+```
+```terminal
 z child-folder
 ```
 The last command will take you back directly inside the directory called child-folder. The z program automatically updates itself as you use it, so it will always know the path of the folders you visited. Makes it much faster to move around in the filesystem.
