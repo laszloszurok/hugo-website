@@ -237,7 +237,7 @@ sudo pacman -S ttf-font-awesome ttf-dejavu
 
 I'm cloning all my [suckless builds](https://suckless.org/), config files and scripts from my github. I'm using a git bare repository to manage my config- and other files in my home folder. 
 
-If you want my configs just clone the repo from the below link as you normally would and then place its content to your home folder. 
+If you want my configs just clone the repo from the link below as you normally would and then place its content into your home folder. 
 
 My scripts may or may not work on your machine, as some of them are specific to the hardware in my laptop.
 
@@ -296,7 +296,7 @@ Execute the above command for all of my suckless builds to install them. Now tha
 cp /etc/X11/xinit/xinitrc /home/youruser/.xinitrc
 ```
 
-Replace 'youruser' with your username. Open the copied file and delete the last five lines containing twm, xclock, etc. Replace it with with the following:
+Replace *'youruser'* with your username. Open the copied file and delete the last five lines containing twm, xclock, etc. Replace it with with the following:
 ```bash    
 exec dwm
 ```
@@ -308,17 +308,11 @@ startx
 
 Make sure you have a terminal emulator installed before running startx. If you installed all of my suckless builds you have [st](https://wiki.archlinux.org/index.php/St).
 
-If you don't want to launch the X server manually with the startx command every time you start up your computer, you have to install a display manager. I am going to install [lightdm](https://wiki.archlinux.org/index.php/LightDM).
-```terminal
-sudo pacman -S lightdm
-```
+If you don't want to launch the X server manually with the startx command every time you start up your computer, you have to install a display manager. I can recommend [lightdm](https://wiki.archlinux.org/index.php/LightDM).
 
-We also need a greeter (a graphical login screen). My favourite one is called [lightdm-slick-greeter](https://github.com/linuxmint/slick-greeter). It's in the AUR, so you have to install it with an AUR helper. I am using yay.
-```terminal
-yay -S lightdm-slick-greeter
-```
+You will also need a greeter (a graphical login screen). My favourite one is called [lightdm-slick-greeter](https://github.com/linuxmint/slick-greeter). It's in the AUR, so you have to install it with an AUR helper, like yay.
 
-We have to make some configurations to make lightdm work. Open the file located at /etc/lightdm/lightdm.conf with a texteditor and uncomment the following line under the [LightDM] section:
+You have to do some configurations to make lightdm work. Open the file located at /etc/lightdm/lightdm.conf with a texteditor and uncomment the following line under the [LightDM] section:
 
 ```text
 [LightDM]
@@ -350,19 +344,19 @@ Exec=/usr/local/bin/dwm
 Type=Application
 ```
 
-Now lightdm is configured, but we have to enable it with [systemctl](https://wiki.archlinux.org/index.php/Systemd). This way lightdm will automatically launch when you boot up your computer.
+Now lightdm is configured, but you have to enable it with [systemctl](https://wiki.archlinux.org/index.php/Systemd). This way lightdm will automatically launch when you boot up your computer.
 ```terminal
 systemctl enable lightdm
 ```
 
-So we have a display manager with a greeter, but the greeter is just a black screen and a login form by default. If you want to set a wallpaper, you can set it through the 
-lightdm-slick-greeter configuration file, but there is a nice graphical tool in the AUR called lightdm-settings which lets you manage the greeter's settings in an easy way.
-Install it with the following command:
-```terminal
-yay -S lightdm-settings
-```
+If you want to set a wallpaper for the greeter, you can set it through the lightdm-slick-greeter configuration file, but there is a nice graphical tool in the AUR called 
+[lightdm-settings](https://github.com/linuxmint/lightdm-settings) which lets you manage the greeter's settings in an easy way.
 
-After you reboot, you should see the lightdm-slick-greeter login screen and DWM should automatically start after you log in.
+To lock the screen after inactivity, you can use [light-locker](https://github.com/the-cavalry/light-locker) (install it with pacman).
+
+You can find [slock](https://tools.suckless.org/slock/) between my suckless builds, which is a very lightweight screen locker utility, but I recommend light-locker if you use lightdm.
+
+If you don't want a display manager you can just log in through the tty and use startx to launch a graphical session.
 
 Now I'm going to apply a nice dark theme for the system. My favourite dark theme is ArcDark, whit the Arc icon-theme. Install these with the following command:
 
