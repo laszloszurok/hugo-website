@@ -10,7 +10,7 @@ tags:
 ---
 ## Connecting to the internet
 
-I have a wireless card in my laptop, but it is not working in a live enviroment due to driver problems. I am going to fix it after the installation. For now I'm going to use my phone to share its wifi connection with the machine through usb. For this to work we need to start a program called [dhcpcd](https://wiki.archlinux.org/index.php/Dhcpcd).
+I have a wireless card in my laptop, but it is not working in a live enviroment (HP driver problems). I am going to fix it after the installation. For now I'm going to use my phone to share its wifi connection with the machine through usb. For this to work we need to start a program called [dhcpcd](https://wiki.archlinux.org/index.php/Dhcpcd) (you can of course use an ethernet connection as well).
 ```terminal
 dhcpcd 
 ```
