@@ -124,6 +124,41 @@ Now restart DWM to see the new colors.
 [Dunst](https://wiki.archlinux.org/index.php/Dunst) is a little program for showing notifications on the desktop.
 My configuration file for it is on my [github page](https://github.com/laszloszurok/suckless-arch/tree/master/.config/dunst). There is a little script as well, which will apply pywal generated colors for the notifications. You have to autostart this script for the colors to be applied. My DWM build has the autostart patch and executes this script when you log in.
 
+## Neovim
+[Neovim](https://neovim.io/) is a highly extensible refactor of Vim.
+
+To automatically install [vim-plug](https://github.com/junegunn/vim-plug), add this to your init.vim file and restart the editor:
+```vim
+if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
+	echo "Downloading junegunn/vim-plug to manage plugins..."
+	silent !mkdir -p ~/.config/nvim/autoload/
+	silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > ~/.config/nvim/autoload/plug.vim
+	autocmd VimEnter * PlugInstall
+endif
+```
+
+To make the usage of vim or nvim more comfortable, I recommend swapping the CapsLock and Esapce keys functionality, as CapsLock is kind of a useless key, but in an easily reachable
+position on the keyboard, while Escape is used fairly often if you use vim bindings. To make this happen, autostart the following command with .xinitrc, or your distros autostart tool:
+```bash
+setxkbmap -option 'caps:swapescape'
+```
+
+## VSCodium
+[VSCodium](https://vscodium.com/) is the community driven, free-licensed version of VSCode (no Microsoft telemetry/tracking).
+
+If you want to use vim keybindings with this editor, you have to install an extention called VSCodeVim. To be able to use the CapsLock key as Escape with the previous method, add the 
+following line to your
+settings.json:
+```text
+{
+    ... ,
+
+    "keyboard.dispatch": "keyCode",
+
+    ...
+}
+```
+
 ## Vifm
 
 [Vifm](https://wiki.archlinux.org/index.php/Vifm) is a terminal file manager. It uses vim like keybindings. 
