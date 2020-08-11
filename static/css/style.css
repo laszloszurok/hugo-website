@@ -17,6 +17,10 @@ html, body {
   z-index: 100;
 }
 
+.dark-theme .header {
+    background: #252627;
+}
+
 .menu {
     background: #f0f0f0;
 }
