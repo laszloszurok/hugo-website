@@ -11,31 +11,31 @@ tags:
 
 ## Generating the filesystem table
 
-Creating the [fstab](https://wiki.archlinux.org/index.php/Fstab) file:
+Creating the {{< target-blank title="fstab" url="https://wiki.archlinux.org/index.php/Fstab" >}} file:
 ```terminal
 genfstab -U /mnt >> /mnt/etc/fstab
 ```
 
 ## Chroot into the installed system
 
-With the [chroot](https://wiki.archlinux.org/index.php/Chroot) command you leave the live enviroment and enter the newly installed system.
+With the {{< target-blank title="chroot" url="https://wiki.archlinux.org/index.php/Chroot" >}} command you leave the live enviroment and enter the newly installed system.
 ```terminal
 arch-chroot /mnt
 ```
 
 ## Timezone and locale
 
-Choose your [timezone](https://wiki.archlinux.org/index.php/System_time#Time_zone):
+Choose your {{< target-blank title="timezone" url="https://wiki.archlinux.org/index.php/System_time#Time_zone" >}}:
 ```terminal
 ln -sf /usr/share/zoneinfo/Europe/Budapest /etc/localtime
 ```
 
-Run [hwclock](https://wiki.archlinux.org/index.php/System_time#Hardware_clock) to generate /etc/adjtime:
+Run {{< target-blank title="hwclock" url="https://wiki.archlinux.org/index.php/System_time#Hardware_clock" >}} to generate /etc/adjtime:
 ```terminal
 hwclock --systohc
 ```
 
-Uncomment the needed [locales](https://wiki.archlinux.org/index.php/Locale) in /etc/locale.gen (in my case en_US.UTF-8):
+Uncomment the needed {{< target-blank title="locales" url="https://wiki.archlinux.org/index.php/Locale" >}} in /etc/locale.gen (in my case en_US.UTF-8):
 ```terminal
 vim /etc/locale.gen
 ```
@@ -52,12 +52,12 @@ echo LANG=en_US.UTF-8 >> /etc/locale.conf
 
 ## Network configuration
 
-Choose a [hostname](https://wiki.archlinux.org/index.php/Network_configuration#Set_the_hostname) (in my case arch):
+Choose a {{< target-blank title="hostname" url="https://wiki.archlinux.org/index.php/Network_configuration#Set_the_hostname" >}} (in my case arch):
 ```terminal
 echo arch >> /etc/hostname
 ```
 
-To edit the [hosts](https://wiki.archlinux.org/index.php/Network_configuration#Local_hostname_resolution) file:
+To edit the {{< target-blank title="hosts" url="https://wiki.archlinux.org/index.php/Network_configuration#Local_hostname_resolution" >}} file:
 ```terminal
 vim /etc/hosts
 ```
@@ -83,7 +83,7 @@ pacman -S grub efibootmgr networkmanager network-manager-applet wireless_tools w
 
 ## Setting up GRUB (Grand Unified Bootloader)
 
-Installing [GRUB](https://wiki.archlinux.org/index.php/GRUB):
+Installing {{< target-blank title="GRUB" url="https://wiki.archlinux.org/index.php/GRUB" >}}:
 
 UEFI:
 ```terminal
@@ -102,7 +102,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 ## User account settings
 
-More info on the [wiki](https://wiki.archlinux.org/index.php/Users_and_groups).
+More info on the {{< target-blank title="wiki" url="https://wiki.archlinux.org/index.php/Users_and_groups" >}}.
 
 Set the root password:
 ```terminal
@@ -157,7 +157,7 @@ reboot
 
 ## Network services and WiFi
 
-Starting and eanbling [network](https://wiki.archlinux.org/index.php/Network_configuration) services.
+Starting and eanbling {{< target-blank title="network" url="https://wiki.archlinux.org/index.php/Network_configuration" >}} services.
 ```terminal
 systemctl enable --now NetworkManager
 ```
@@ -183,7 +183,7 @@ make
 sudo make install
 ```
 
-Installing the driver as a [kernel module](https://wiki.archlinux.org/index.php/Kernel_module) with [dkms](https://wiki.archlinux.org/index.php/Dynamic_Kernel_Module_Support), so it will be rebuilt automatically at kernel updates:
+Installing the driver as a {{< target-blank title="kernel module" url="https://wiki.archlinux.org/index.php/Kernel_module" >}} with {{< target-blank title="dkms" url="https://wiki.archlinux.org/index.php/Dynamic_Kernel_Module_Support" >}}, so it will be rebuilt automatically at kernel updates:
 ```terminal
 sudo dkms add ./rtw88
 ```
@@ -193,8 +193,8 @@ sudo dkms install rtlwifi-new/0.6
 
 ## Accessing the AUR
 
-The [Arch User Repository](https://wiki.archlinux.org/index.php/Arch_User_Repository) - as the name suggests - is a repository which contains software made by the community. You can not access this repository directly with pacman. You have to install
-a software called an AUR helper to be able to install packages from this repo. My favourite one is [yay](https://github.com/Jguer/yay). You can install it with the following commands:
+The {{< target-blank title="Arch User Repository" url="https://wiki.archlinux.org/index.php/Arch_User_Repository" >}} - as the name suggests - is a repository which contains software made by the community. You can not access this repository directly with pacman. You have to install
+a software called an AUR helper to be able to install packages from this repo. My favourite one is {{< target-blank title="yay" url="https://github.com/Jguer/yay" >}}. You can install it with the following commands:
 
 ```terminal
 git clone https://aur.archlinux.org/yay.git
@@ -220,22 +220,22 @@ For AMD cards:
 sudo pacman -S xf86-video-amdgpu
 ```
 
-Then we are going to install [xorg](https://wiki.archlinux.org/index.php/Xorg).
+Then we are going to install {{< target-blank title="xorg" url="https://wiki.archlinux.org/index.php/Xorg" >}}.
 ```terminal
 sudo pacman -S xorg
 ```
 
-We need to install a package called [xorg-xinit](https://wiki.archlinux.org/index.php/Xinit) as well:
+We need to install a package called {{< target-blank title="xorg-xinit" url="https://wiki.archlinux.org/index.php/Xinit" >}} as well:
 ```terminal
 sudo pacman -S xorg-xinit
 ```
 
-I am going to install my build of [DWM](https://wiki.archlinux.org/index.php/Dwm), which needs the following two fonts to work properly:
+I am going to install my build of {{< target-blank title="DWM" url="https://wiki.archlinux.org/index.php/Dwm" >}}, which needs the following two fonts to work properly:
 ```terminal
 sudo pacman -S ttf-font-awesome ttf-dejavu
 ```
 
-I'm cloning all my [suckless builds](https://suckless.org/), config files and scripts from my github. I'm using a git bare repository to manage my config- and other files in my home folder. 
+I'm cloning all my {{< target-blank title="suckless builds" url="https://suckless.org/" >}}, config files and scripts from my github. I'm using a git bare repository to manage my config- and other files in my home folder. 
 
 If you want my configs just clone the repo from the link below as you normally would and then place its content into your home folder. 
 
@@ -306,11 +306,11 @@ Save the file and exit the editor. Now you should be able to launch dwm with thi
 startx
 ```
 
-Make sure you have a terminal emulator installed before running startx. If you installed all of my suckless builds you have [st](https://wiki.archlinux.org/index.php/St).
+Make sure you have a terminal emulator installed before running startx. If you installed all of my suckless builds you have {{< target-blank title="st" url="https://wiki.archlinux.org/index.php/St" >}}.
 
-If you don't want to launch the X server manually with the startx command every time you start up your computer, you have to install a display manager. I can recommend [lightdm](https://wiki.archlinux.org/index.php/LightDM).
+If you don't want to launch the X server manually with the startx command every time you start up your computer, you have to install a display manager. I can recommend {{< target-blank title="lightdm" url="https://wiki.archlinux.org/index.php/LightDM" >}}.
 
-You will also need a greeter (a graphical login screen). My favourite one is called [lightdm-slick-greeter](https://github.com/linuxmint/slick-greeter). It's in the AUR, so you have to install it with an AUR helper, like yay.
+You will also need a greeter (a graphical login screen). My favourite one is called {{< target-blank title="lightdm-slick-greeter" url="https://github.com/linuxmint/slick-greeter" >}}. It's in the AUR, so you have to install it with an AUR helper, like yay.
 
 You have to do some configurations to make lightdm work. Open the file located at /etc/lightdm/lightdm.conf with a texteditor and uncomment the following line under the [LightDM] section:
 
@@ -344,17 +344,17 @@ Exec=/usr/local/bin/dwm
 Type=Application
 ```
 
-Now lightdm is configured, but you have to enable it with [systemctl](https://wiki.archlinux.org/index.php/Systemd). This way lightdm will automatically launch when you boot up your computer.
+Now lightdm is configured, but you have to enable it with {{< target-blank title="systemctl" url="https://wiki.archlinux.org/index.php/Systemd" >}}. This way lightdm will automatically launch when you boot up your computer.
 ```terminal
 systemctl enable lightdm
 ```
 
 If you want to set a wallpaper for the greeter, you can set it through the lightdm-slick-greeter configuration file, but there is a nice graphical tool in the AUR called 
-[lightdm-settings](https://github.com/linuxmint/lightdm-settings) which lets you manage the greeter's settings in an easy way.
+{{< target-blank title="lightdm-settings" url="https://github.com/linuxmint/lightdm-settings" >}} which lets you manage the greeter's settings in an easy way.
 
-To lock the screen after inactivity, you can use [light-locker](https://github.com/the-cavalry/light-locker) (install it with pacman).
+To lock the screen after inactivity, you can use {{< target-blank title="light-locker" url="https://github.com/the-cavalry/light-locker" >}} (install it with pacman).
 
-You can find [slock](https://tools.suckless.org/slock/) between my suckless builds, which is a very lightweight screen locker utility, but I recommend light-locker if you use lightdm.
+You can find {{< target-blank title="slock" url="https://tools.suckless.org/slock/" >}} between my suckless builds, which is a very lightweight screen locker utility, but I recommend light-locker if you use lightdm.
 
 If you don't want a display manager you can just log in through the tty and use startx to launch a graphical session.
 
@@ -369,7 +369,7 @@ The tools I'm using for managing themes are lxappearance for GTK and qt5ct for Q
 ```terminal
 sudo pacman -S lxappearance qt5ct
 ```
-To apply the themes globally, add these [environmental variables](https://wiki.archlinux.org/index.php/Environment_variables) to /etc/environment:
+To apply the themes globally, add these {{< target-blank title="environmental variables" url="https://wiki.archlinux.org/index.php/Environment_variables" >}} to /etc/environment:
 ```text
 GTK_THEME=Arc-Dark
 QT_QPA_PLATFORMTHEME=qt5ct
@@ -393,7 +393,7 @@ Restart the X server for the changes to take effect.
 
 ## Enabling sound
 
-I'm using the [ALSA](https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture) sound system on my machine. Install alsa-utils with the following command. This will provide a program called alsa-mixer which you can use to control sound.
+I'm using the {{< target-blank title="ALSA" url="https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture" >}} sound system on my machine. Install alsa-utils with the following command. This will provide a program called alsa-mixer which you can use to control sound.
 ```terminal
 sudo pacman -S alsa-utils
 ```

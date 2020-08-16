@@ -10,7 +10,8 @@ tags:
 ---
 ## Connecting to the internet
 
-I have a wireless card in my laptop, but it is not working in a live enviroment (HP driver problems). I am going to fix it after the installation. For now I'm going to use my phone to share its wifi connection with the machine through usb. For this to work we need to start a program called [dhcpcd](https://wiki.archlinux.org/index.php/Dhcpcd) (you can of course use an ethernet connection as well).
+I have a wireless card in my laptop, but it is not working in a live enviroment (HP driver problems). I am going to fix it after the installation. For now I'm going to use my phone to share its wifi connection with the machine through usb. For this to work we need to start a program called {{< target-blank title="dhcpcd" url="https://wiki.archlinux.org/index.php/Dhcpcd" >}} (you can of course use an ethernet connection as well).
+
 ```terminal
 dhcpcd 
 ```
@@ -22,14 +23,14 @@ ping archlinux.org
 
 ## Time and date
 
-Update the system clock with [timedatectl](https://wiki.archlinux.org/index.php/System_time#System_clock).
+Update the system clock with {{< target-blank title="timedatectl" url="https://wiki.archlinux.org/index.php/System_time#System_clock" >}}.
 ```terminal
 timedatectl set-ntp true
 ```
 
 ## Partitioning the disk
 
-I am using [fdisk](https://wiki.archlinux.org/index.php/Fdisk) to create my partitions. Use [lsblk](https://wiki.archlinux.org/index.php/Device_file) to get the appropriate device names. (eg. /dev/sda)
+I am using {{< target-blank title="fdisk" url="https://wiki.archlinux.org/index.php/Fdisk" >}} to create my partitions. Use {{< target-blank title="lsblk" url="https://wiki.archlinux.org/index.php/Device_file" >}} to get the appropriate device names. (eg. /dev/sda)
 ```terminal
 fdisk /path/to/device
 ```

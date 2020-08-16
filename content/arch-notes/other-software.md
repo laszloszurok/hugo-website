@@ -11,7 +11,7 @@ tags:
 
 ## The Z program
 
-The [z program](https://github.com/rupa/z) will make your life easier on the command line. Installation:
+The {{< target-blank title="z program" url="https://github.com/rupa/z" >}} will make your life easier on the command line. Installation:
 
 ```terminal
 git clone https://github.com/rupa/z ~/z
@@ -76,13 +76,13 @@ chsh -s /usr/bin/zsh
 
 ## Pywal color genearation
 
-I like to add some extra prettiness to my window manager. [Pywal](https://github.com/dylanaraps/pywal) can generate colors based on your wallpaper and you can use them in your configuration files to have a unified colorscheme across your system. It will also set your terminal colors.
+I like to add some extra prettiness to my window manager. {{< target-blank title="Pywal" url="https://github.com/dylanaraps/pywal" >}} can generate colors based on your wallpaper and you can use them in your configuration files to have a unified colorscheme across your system. It will also set your terminal colors.
 
 Install it from the AUR:
 ```terminal
 yay -S python-pywal
 ```
-You also need a utility to set a chosen image as your wallpaper. I'm using [feh](https://wiki.archlinux.org/index.php/Feh).
+You also need a utility to set a chosen image as your wallpaper. I'm using {{< target-blank title="feh" url="https://wiki.archlinux.org/index.php/Feh" >}}.
 ```terminal
 sudo pacman -S feh
 ```
@@ -121,13 +121,13 @@ Now restart DWM to see the new colors.
 
 ## Dunst
 
-[Dunst](https://wiki.archlinux.org/index.php/Dunst) is a little program for showing notifications on the desktop.
-My configuration file for it is on my [github page](https://github.com/laszloszurok/suckless-arch/tree/master/.config/dunst). There is a little script as well, which will apply pywal generated colors for the notifications. You have to autostart this script for the colors to be applied. My DWM build has the autostart patch and executes this script when you log in.
+{{< target-blank title="Dunst" url="https://wiki.archlinux.org/index.php/Dunst" >}} is a little program for showing notifications on the desktop.
+My configuration file for it is on my {{< target-blank title="github page" url="https://github.com/laszloszurok/suckless-arch/tree/master/.config/dunst" >}}. There is a little script as well, which will apply pywal generated colors for the notifications. You have to autostart this script for the colors to be applied. My DWM build has the autostart patch and executes this script when you log in.
 
 ## Neovim
-[Neovim](https://neovim.io/) is a highly extensible refactor of Vim.
+{{< target-blank title="Neovim" url="https://neovim.io/" >}} is a highly extensible refactor of Vim.
 
-To automatically install [vim-plug](https://github.com/junegunn/vim-plug), add this to your init.vim file and restart the editor:
+To automatically install {{< target-blank title="vim-plug" url="https://github.com/junegunn/vim-plug" >}}, add this to your init.vim file and restart the editor:
 ```vim
 if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
 	echo "Downloading junegunn/vim-plug to manage plugins..."
@@ -144,7 +144,7 @@ setxkbmap -option 'caps:swapescape'
 ```
 
 ## VSCodium
-[VSCodium](https://vscodium.com/) is the community driven, free-licensed version of VSCode (no Microsoft telemetry/tracking).
+{{< target-blank title="VSCodium" url="https://vscodium.com/" >}} is the community driven, free-licensed version of VSCode (no Microsoft telemetry/tracking).
 
 If you want to use vim keybindings with this editor, you have to install an extention called VSCodeVim. To be able to use the CapsLock key as Escape with the previous method, add the 
 following line to your
@@ -161,8 +161,8 @@ settings.json:
 
 ## Vifm
 
-[Vifm](https://wiki.archlinux.org/index.php/Vifm) is a terminal file manager. It uses vim like keybindings. 
-You can set [color schemes](https://vifm.info/colorschemes.shtml) for it, my favourite is the palenight theme. To apply a theme, download and place it
+{{< target-blank title="Vifm" url="https://wiki.archlinux.org/index.php/Vifm" >}} is a terminal file manager. It uses vim like keybindings. 
+You can set {{< target-blank title="color schemes" url="https://vifm.info/colorschemes.shtml" >}} for it, my favourite is the palenight theme. To apply a theme, download and place it
 inside .config/vifm/colors/ . Then open .config/vifm/vifmrc and add this line:
 ```vim
 colorscheme palenight
@@ -210,5 +210,5 @@ fileviewer <font/*>
     \ %pc
     \ vifmimg clear
 ```
-Then clone this repo: <https://github.com/cirala/vifmimg> and place the vifmimg and vifmrun scripts in a folder that is included in your $PATH variable.
+Then clone this repo: {{< target-blank url="https://github.com/cirala/vifmimg" >}} and place the vifmimg and vifmrun scripts in a folder that is included in your $PATH variable.
 From now on, you have to launch vifm with the vifmrun script to have image-, pdf-, video thumbnail-, etc. previews. For faster access: alias vf=vifmrun.
