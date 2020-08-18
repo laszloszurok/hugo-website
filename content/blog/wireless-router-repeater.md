@@ -1,12 +1,9 @@
 ---
 title: "Set up a wireless router as a repeater"
-date: 2020-07-27T17:15:44+02:00
-summary: "A repeater is a device that is used to extend transmissions so that the signal can cover longer distances. 
-
-If you want to extend the coverage of your wireless network, you can set up a secondary router to connect to your main router and act as a repeater. 
-Nowadays most routers have this functionality built in. 
-
-In this tutorial I'm going to show an example setup with a D-Link device as the repeater." 
+date: 2020-08-18T22:04:44+02:00
+summary: "A repeater is a device that is used to extend transmissions so that the signal can cover longer distances. If you want to extend the 
+coverage of your wireless network, you can set up a secondary router to connect to your main router and act as a repeater. Nowadays most routers
+have this functionality built in. In this tutorial I'm going to show an example setup with a D-Link device as the repeater." 
 toc: true
 draft: false
 tags:
