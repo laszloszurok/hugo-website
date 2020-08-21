@@ -6,14 +6,8 @@ theme = "hello-friend-ng"
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
 
-paginate  = 10
-rssLimit  = 10  # Maximum number of items in the RSS feed.
-copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
-
 googleAnalytics = "UA-174077524-1"
 # disqusShortname = ""
-
-pluralizelisttitles = "false"
 
 archetypeDir = "archetypes"
 contentDir   = "content"
@@ -41,14 +35,6 @@ disableHugoGeneratorInject = false
 [author]
   name = "László Szurok"
 
-[blackfriday]
-  hrefTargetBlank = true
-
-# [taxonomies]
-#  category = "blog"
-#  tag      = "tags"
-#  series   = "series"
-
 [params]
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
@@ -60,24 +46,9 @@ disableHugoGeneratorInject = false
   keywords = ""
   images = [""]
 
-  homeSubtitle = "Hungarian IT student"
-
-  # Prefix of link to the git commit detail page. GitInfo must be enabled.
-  # gitUrl = ""
-
-  # Set disableReadOtherPosts to true in order to hide the links to other posts.
-  disableReadOtherPosts = false
-
-  # Sharing buttons
-  # There are a lot of buttons preconfigured. If you want to change them,
-  # generate the buttons here: https://sharingbuttons.io
-  # and add them into your own `layouts/partials/sharing-buttons.html`
-  enableSharingButtons = true
-
   # Integrate Javascript files or stylesheets by adding the url to the external assets or by
   # linking local files with their path relative to the static folder, e.g. "css/styles.css"
-  customCSS = ["/css/style.css", "/css/bootstrap-grid.min.css", "/css/sticky-side-nav.css"]
-  customJS  = ["/js"]
+  customCSS = ["/css/style.css"]
 
   # Toggle this option need to rebuild SCSS, requires extended version of Hugo
   justifyContent = false  # Set "text-align: justify" to .post-content.
@@ -86,53 +57,8 @@ disableHugoGeneratorInject = false
   defaultTheme = "dark"
   themeColor = "#252627"
 
-  # Colors for favicons
-  [params.favicon.color]
-    mask = "#252627"
-    msapplication = "#252627"
-    theme = "#252627"
-
-  [params.logo]
-    logoText     = "cd $HOME"
-    logoHomeLink = "/"
-    # Set true to remove the logo cursor entirely.
-    # logoCursorDisabled = false
-    # Set to a valid CSS color to change the cursor in the logo.
-    # logoCursorColor    = "#67a2c9"
-    # Set to a valid CSS time value to change the animation duration, "0s" to disable.
-    # logoCursorAnimate  = "2s"
-
-  # Uncomment this if you want a portrait on your start page
-   [params.portrait]
-     path     = "/img/photo.jpg"
-     alt      = "Portrait"
-     maxWidth = "150px"
-
-  # Social icons
-  [[params.social]]
-    name = "github"
-    url  = "https://github.com/laszloszurok"
-
-  [[params.social]]
-    name = "email"
-    url  = "mailto:szuroklaszlo97@gmail.com"
-
 [languages]
   [languages.en]
     subtitle  = ""
     weight    = 1
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-
-[menu]
-  [[menu.main]]
-    identifier = "arch-notes"
-    name       = "Arch-notes"
-    url        = "/arch-notes"
-  [[menu.main]]
-    identifier = "blog"
-    name       = "Blog"
-    url        = "/blog"
-  [[menu.main]]
-    identifier = "meh"
-    name       = "meh"
-    url        = "/meh"

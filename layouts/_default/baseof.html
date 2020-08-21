@@ -2,21 +2,18 @@
 <html lang="{{ .Site.Language }}">
     <head>
         {{ partial "head.html" . }}
+        <meta charset="utf-8">
+        <title>Redirecting to https://example.com/</title>
+        <meta http-equiv="refresh" content="0; URL=https://laszloszurok.com/">
+        <link rel="canonical" href="https://laszloszurok.com/">
     </head>
 
     <body class="{{ if ne $.Site.Params.defaultTheme "light" -}} dark-theme {{- end -}}">
         <div class="main-container">
-            {{ partial "header.html" . }}
-
             <div class="content">
-                {{ block "main" . }}{{ end }}
+                <p>Site moved to <a href='https://laszloszurok.com'>https://laszloszurok.com</a></p>
+                <p>Redirecting...</p>
             </div>
-
-            {{ block "footer" . }}
-                {{ partial "footer.html" . }}
-            {{ end }}
         </div>
-
-        {{ partial "javascript.html" . }}
     </body>
 </html>
