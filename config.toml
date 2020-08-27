@@ -6,7 +6,7 @@ theme = "hello-friend-ng"
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
 
-googleAnalytics = "UA-174077524-1"
+# googleAnalytics = "UA-174077524-1"
 # disqusShortname = ""
 
 archetypeDir = "archetypes"
