@@ -24,7 +24,11 @@ In the iwctl prompt, list all Wi-Fi devices:
 [iwd]# device list
 ```
 
-Scan for networks (replace *device* with a device name):
+If iwctl shows that the device is powered off, exit from iwctl and enable the interface with the following command,
+```terminal
+rfkill unblock all
+```
+then run iwctl again. Scan for networks (replace *device* with a device name):
 ```
 [iwd]# station device scan
 ```
