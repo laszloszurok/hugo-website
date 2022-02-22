@@ -10,6 +10,7 @@ copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_
 [params]
     messageTitle = "Welcome to my website!"
     messageContent = "I write about free and open source software and other IT related topics. You can find all posts under the POSTS menu."
+    customUrl = "https://github.com/laszloszurok"
 
 [[menu.main]]
     name = "Arch-notes"
