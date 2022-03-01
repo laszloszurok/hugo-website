@@ -138,7 +138,7 @@ Save and exit the editor.
 
 ## Exiting and rebooting
 
-To exit the installation back to the live enviroment:
+To exit the installation back to the live environment:
 ```terminal
 exit
 ```
