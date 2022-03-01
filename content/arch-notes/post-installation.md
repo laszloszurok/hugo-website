@@ -18,7 +18,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 
 ## Chroot into the installed system
 
-With the {{< target-blank title="chroot" url="https://wiki.archlinux.org/index.php/Chroot" >}} command you leave the live enviroment and enter the newly installed system.
+With the {{< target-blank title="chroot" url="https://wiki.archlinux.org/index.php/Chroot" >}} command you leave the live environment and enter the newly installed system.
 ```terminal
 arch-chroot /mnt
 ```
