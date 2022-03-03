@@ -17,4 +17,5 @@
 .message { margin-bottom: 3em; }
 @media only screen and (max-width: 800px) {
     .message { margin: initial; }
+    .home { padding: 1em 0 0 0; }
 }
