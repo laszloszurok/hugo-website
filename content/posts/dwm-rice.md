@@ -53,7 +53,7 @@ DWM in itself can display your windows and statusbar, supports different layouts
 other functionality like autostarting programs when dwm starts up. You can extend dwm with patches. You can find a lot of them on the {{< target-blank title="official site" url="https://dwm.suckless.org/patches/" >}}.
 You can apply a patch with the 'patch' command like this (in the dwm directory):
 ```terminal
-sudo patch -p1 < path/to/the/diff/file
+patch -p1 < path/to/the/diff/file
 ```
 A patch is a file that contains the differences between the state of a file before and after the patch is applied. In the case of dwm, a patch usually modifies the config.def.h
 or the dwm.c file.
@@ -100,7 +100,7 @@ The first patch I'm going to apply is called {{< target-blank title="dwm-restart
 What I mean by this is you do not have to restart your X session by killing the X server, you can just refresh dwm, so for e.g. if you make some changes in your status bar,
 you can see the changes instantly after the refresh. Use the patch command to apply pathces like this:
 ```terminal
-sudo patch -p1 < dwm-restartsig-20180523-6.2.diff
+patch -p1 < dwm-restartsig-20180523-6.2.diff
 ```
 After you have the restartsig patch, rebuild dwm. You have to restart it manually now, but after that, you can use the Mod+ctrl+shift+q keycombination to refresh dwm without killing X.
 
@@ -162,7 +162,7 @@ static const int vertpadbar  = 7; /* vertical padding for statusbar */
 ## An awesome bar
 To display the title of every window on the current tag, you can apply the {{< target-blank title="awesomebar" url="https://dwm.suckless.org/patches/awesomebar/" >}} patch like this:
 ```terminal
-sudo patch -p1 < dwm-awesomebar-20200907-6.2.diff
+patch -p1 < dwm-awesomebar-20200907-6.2.diff
 ```
 
 ## Status indicators with dwmblocks
@@ -296,7 +296,7 @@ static const char *colors[][3]      = {
 ## Gaps
 I am using the {{< target-blank title="ru_gaps" url="https://dwm.suckless.org/patches/ru_gaps/" >}} patch to have some space around the windows. Download, then apply it like this:
 ```terminal
-sudo patch -p1 < dwm-ru_gaps-6.2.diff
+patch -p1 < dwm-ru_gaps-6.2.diff
 ```
 Then you can set the gapsize in config.def.h like this:
 ```c
