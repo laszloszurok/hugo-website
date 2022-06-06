@@ -191,10 +191,10 @@ git clone https://github.com/torrinfail/dwmblocks.git
 Edit the blocks.h file to add your status indicators like this:
 ```c
 static const Block blocks[] = {
-	/*Icon*/	/*Command*/		        /*Update Interval*/	   /*Update Signal*/
-    { "  ",      "~/scripts/status/wifinetwork",  20,   1 },
-    { "   ",     "~/scripts/status/cpu",                 5,   2 },
-    { "   ",     "~/scripts/status/memory",            5,   3 },
+    /*Icon*/        /*Command*/	              /*Update Interval*/     /*Update Signal*/
+    { "  ",      "~/scripts/status/wifinetwork",      20,                  1 },
+    { "   ",     "~/scripts/status/cpu",               5,                  2 },
+    { "   ",     "~/scripts/status/memory",            5,                  3 },
 };
 
 //sets delimeter between status commands. NULL character ('\0') means no delimeter.
@@ -206,8 +206,7 @@ Now I'll cover the click functionality, as I promised:
 To be able to have clickable icons, we first have to apply the {{< target-blank title="statuscmd-signal" url="https://dwm.suckless.org/patches/statuscmd/" >}} patch to dwm. Download and apply it with the patch command, just like with the previous patches. 
 
 Then we have to apply the {{< target-blank title="dwmblocks-statuscmd" url="https://dwm.suckless.org/patches/statuscmd/" >}} patch to dwmblocks. 
-(This links to the same page as the statuscmd-signal dwm patch. They are on the same page, scroll down to find them. You can find three patches there, but we
-only need the statuscmd-signal for dwm and the dwmblocks-statucmd for dwmblocks).
+(This links to the same page as the statuscmd-signal dwm patch. They are on the same page, scroll down to find them. You can find three patches there, but we only need the statuscmd-signal for dwm and the dwmblocks-statucmd for dwmblocks).
 Download and apply it, then install dwmblocks.
 
 At last you have to autosart dwmblocks with your system. Put this line into your .xinitrc, before exec dwm, like this:
@@ -249,24 +248,27 @@ To kill and refresh a status indicator with a key combination you can have somet
 static Key keys[] = {
     /* modifier   key                    function        argument */
     ...
-    
+
     { 0,      XF86XK_AudioRaiseVolume,    spawn,     SHCMD("amixer sset Master 5%+ ; pkill -RTMIN+10 dwmblocks") },
     { 0,      XF86XK_AudioLowerVolume,    spawn,     SHCMD("amixer sset Master 5%- ; pkill -RTMIN+10 dwmblocks") },
-    
+
     ...
 };
 ```
 If you want to display the curent volume level on the status bar, it will update when you raise or lower the volume with the built-in keys (I have these keys on my laptop).
 
 This part:
+
 ```bash
 pkill -RTMIN+10 dwmblocks
 ```
+
 is the command which updates only the volume indicator. -RTMIN+10 means the indicator with the signal number of 10. (The number you set in dwmblocks/blocks.h)
 
 ## Colors
 
 In dwm/config.def.h you can set your colors like this (assuming you have the awesomebar patch installed):
+
 ```c
 static const char norm_fg[] = "#e0dbd2";
 static const char norm_bg[] = "#191b28";
@@ -285,15 +287,16 @@ static const char hid_bg[] = "#191b28";
 static const char hid_border[] = "#000";
 
 static const char *colors[][3]      = {
-    /*                 fg          bg          border                         */
-    [SchemeNorm]   = { norm_fg,    norm_bg,    norm_border }, 
-    [SchemeSel]    = { sel_fg,     sel_bg,     sel_border },  // the focused win
-	[SchemeHid]    = { hid_fg,     hid_bg,     hid_border },
-    [SchemeNotSel] = { not_sel_fg, not_sel_bg, not_sel_border }  // unfocused wins
+   /*                 fg          bg          border                         */
+   [SchemeNorm]   = { norm_fg,    norm_bg,    norm_border }, 
+   [SchemeSel]    = { sel_fg,     sel_bg,     sel_border },  // the focused win
+   [SchemeHid]    = { hid_fg,     hid_bg,     hid_border },
+   [SchemeNotSel] = { not_sel_fg, not_sel_bg, not_sel_border }  // unfocused wins
 };
 ```
 
 ## Gaps
+
 I am using the {{< target-blank title="ru_gaps" url="https://dwm.suckless.org/patches/ru_gaps/" >}} patch to have some space around the windows. Download, then apply it like this:
 ```terminal
 patch -p1 < dwm-ru_gaps-6.2.diff
