@@ -1,5 +1,5 @@
 ---
-title: "Enable hibernation in Linux"
+title: "GNU/Linux hibernation"
 date: 2021-03-19T20:37:24+01:00
 toc: true
 draft: false
