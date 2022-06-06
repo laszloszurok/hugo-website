@@ -124,9 +124,10 @@ mount /path/to/efi/partition /mnt/boot/EFI
 If you created a swap partiton:
 ```terminal
 swapon /path/to/swap/partition
-``` 
+```
 
 ## Symlinking /etc/resolv.conf
+
 If you want to use {{< target-blank title="systemd-resolved" url="https://wiki.archlinux.org/title/Systemd-resolved" >}} for name resolution, run the following command:
 ```terminal
 ln -sf /run/systemd/resolve/stub-resolv.conf /mnt/etc/resolv.conf
