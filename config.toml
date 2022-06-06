@@ -1,6 +1,6 @@
-baseURL = "https://laszloszurok.github.io"
+baseURL = "https://pulzar.envs.net"
 languageCode = "en-us"
-title = "laszloszurok.github.io"
+title = "pulzar.envs.net"
 theme = "monospace-dark"
 copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
