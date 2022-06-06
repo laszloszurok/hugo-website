@@ -1,9 +1,7 @@
 ---
 title: "Extend your home network"
 date: 2020-08-18T22:04:44+02:00
-summary: "A repeater is a device that is used to extend transmissions so that the signal can cover longer distances. If you want to extend the 
-coverage of your wireless network, you can set up a secondary router to connect to your main router and act as a repeater. Nowadays most routers
-have this functionality built in. In this tutorial I'm going to show an example setup with a D-Link device as the repeater." 
+summary: "A repeater is a device that is used to extend transmissions so that the signal can cover longer distances. If you want to extend the coverage of your wireless network, you can set up a secondary router to connect to your main router and act as a repeater. Nowadays most routers have this functionality built in."
 toc: true
 draft: false
 tags:
@@ -14,20 +12,15 @@ tags:
 
 A repeater is a device that is used to extend transmissions so that the signal can cover longer distances. 
 
-If you want to extend the coverage of your wireless network, you can set up a secondary router to connect to your main router and act as a repeater. 
-Nowadays most routers have this functionality built in. 
-
-In this tutorial I'm going to show an example setup with a D-Link device as the repeater.
+To extend the coverage of a wireless network, one can set up a secondary router to connect to the main router and act as a repeater. Nowadays most routers have this functionality built in. 
 
 ## Factory reset the secondary router
 
-First you have to reset the device to its factory settings. Most routers have a little button on the back, labeled as RESET. You usually have to hold that button for
-10 seconds to perform a factory reset.
+Reset the device to its factory settings by holding the reset button for about 10 seconds.
 
 ## Accessing the settings
 
-Connect the secondary router to your computer with an ethernet cable. Check the devices back for its default IP address and login credentials. In my case the IP is 192.168.0.1. Enter that IP
-address to the url bar of your webbrowser to open the configuration page. Log in with the given credentials (usually admin-admin).
+Connect the secondary router to a computer with an ethernet cable. Log in to the admin panel of the device on its default IP address. (Usually 192.168.0.1 or 192.168.1.1).
 
 ## Repeater settings
 
