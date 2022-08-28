@@ -7,7 +7,7 @@ draft: false
 
 (Using GRUB and systemd.)
 
-A more extensive explanation can be found on the {{< target-blank title="ArchWiki" url="https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate" >}}.
+A more extensive explanation can be found on the [ArchWiki](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate).
 
 ## Requirements
 

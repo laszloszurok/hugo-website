@@ -8,11 +8,11 @@ tags:
   - arch
   - installation
 ---
-More info on the {{< target-blank title="wiki" url="https://wiki.archlinux.org/index.php/Installation_guide" >}}.
+More info on the [wiki](https://wiki.archlinux.org/index.php/Installation_guide).
 
 ## Setting up the mirrorlist
 
-For faster download speeds choose the appropriate mirrors based on your country. I'm going to use vim to edit the {{< target-blank title="mirrorlist" url="https://wiki.archlinux.org/index.php/Mirrors" >}} file.
+For faster download speeds choose the appropriate mirrors based on your country. I'm going to use vim to edit the [mirrorlist](https://wiki.archlinux.org/index.php/Mirrors) file.
 ```terminal
 vim /etc/pacman.d/mirrorlist
 ```

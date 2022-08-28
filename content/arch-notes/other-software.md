@@ -10,7 +10,7 @@ tags:
 ---
 
 ## zsh
-Install {{< target-blank title="zsh" url="https://wiki.archlinux.org/index.php/zsh" >}}:
+Install [zsh](https://wiki.archlinux.org/index.php/zsh):
 ```terminal
 sudo pacman -S zsh
 ```
@@ -21,7 +21,7 @@ chsh -s /usr/bin/zsh
 
 ## Zoxide
 
-{{< target-blank title="Zoxide" url="https://github.com/ajeetdsouza/zoxide" >}} will make your life easier on the command line. Installation:
+[Zoxide](https://github.com/ajeetdsouza/zoxide) will make your life easier on the command line. Installation:
 
 ```terminal
 paru -S zoxide-bin
@@ -44,9 +44,9 @@ z child-folder
 The last command will take you back directly inside the directory called child-folder. Zoxide automatically updates itself as you use it, so it will always know the path of the folders you visited. Makes it much faster to move around in the filesystem.
 
 ## Neovim
-{{< target-blank title="Neovim" url="https://neovim.io/" >}} is a highly extensible refactor of Vim.
+[Neovim](https://neovim.io/) is a highly extensible refactor of Vim.
 
-To automatically install {{< target-blank title="vim-plug" url="https://github.com/junegunn/vim-plug" >}}, add this to your init.vim file and restart the editor:
+To automatically install [vim-plug](https://github.com/junegunn/vim-plug), add this to your init.vim file and restart the editor:
 ```vim
 if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
 	echo "Downloading junegunn/vim-plug to manage plugins..."
@@ -63,8 +63,8 @@ setxkbmap -option 'caps:swapescape'
 ```
 ## Vifm
 
-{{< target-blank title="Vifm" url="https://wiki.archlinux.org/index.php/Vifm" >}} is a terminal file manager. It uses vim like keybindings. 
-To apply {{< target-blank title="color schemes" url="https://vifm.info/colorschemes.shtml" >}}, download and place it inside .config/vifm/colors/ . Then open .config/vifm/vifmrc and add this line
+[Vifm](https://wiki.archlinux.org/index.php/Vifm) is a terminal file manager. It uses vim like keybindings. 
+To apply [color schemes](https://vifm.info/colorschemes.shtml), download and place it inside .config/vifm/colors/ . Then open .config/vifm/vifmrc and add this line
 (replace themename):
 ```vim
 colorscheme themename
@@ -112,7 +112,7 @@ fileviewer <font/*>
     \ %pc
     \ vifmimg clear
 ```
-Then clone this repo: {{< target-blank url="https://github.com/cirala/vifmimg" >}} and place the vifmimg and vifmrun scripts in a folder that is included in your $PATH variable.
+Then clone this repo: [https://github.com/cirala/vifmimg](https://github.com/cirala/vifmimg) place the vifmimg and vifmrun scripts in a folder that is included in your $PATH variable.
 From now on, you have to launch vifm with the vifmrun script to have image-, pdf-, video thumbnail-, etc. previews.
 
 ## Spotify
@@ -143,7 +143,7 @@ Replace \<USERNAME\> with your username, then save the file and make it executab
 
 
 ## VSCodium
-{{< target-blank title="VSCodium" url="https://vscodium.com/" >}} is the community driven, free-licensed version of VSCode (no Microsoft telemetry/tracking).
+[VSCodium](https://vscodium.com/) is the community driven, free-licensed version of VSCode (no Microsoft telemetry/tracking).
 
 If you want to use vim keybindings with this editor, you have to install an extention called VSCodeVim. To be able to use the CapsLock key as Escape, like with Neovim, add the following line to your settings.json:
 ```text

@@ -10,9 +10,9 @@ tags:
  - tutorial
 ---
 This tutorial will go over how to customize DWM. I'm going to use my own DWM build as an example. If you want to see the final looks of the setup
-I'm going to build here, you can check it out {{< target-blank title="here" url="/arch-notes/screenshots" >}}.
+I'm going to build here, you can check it out [here](arch-notes/screenshots).
 
-This post was made for a request from a Reddit user after I posted an image of my Arch linux setup in {{< target-blank title="r/unixporn" url="https://www.reddit.com/r/unixporn/" >}}. 
+This post was made for a request from a Reddit user after I posted an image of my Arch linux setup in [r/unixporn](https://www.reddit.com/r/unixporn/). 
 
 ## About DWM
 DWM stands for Dynamic Window Manager. As the name suggests it manages windows in a graphical enviroment. It supports different layouts, like tiled, stacked, etc.
@@ -50,7 +50,7 @@ So from now on you only have to deal with the config.def.h file and you can use 
 
 ## Patching
 DWM in itself can display your windows and statusbar, supports different layouts but it is not full of features. You may want to use a different layout, or you want to add
-other functionality like autostarting programs when dwm starts up. You can extend dwm with patches. You can find a lot of them on the {{< target-blank title="official site" url="https://dwm.suckless.org/patches/" >}}.
+other functionality like autostarting programs when dwm starts up. You can extend dwm with patches. You can find a lot of them on the [official site](https://dwm.suckless.org/patches/).
 You can apply a patch with the 'patch' command like this (in the dwm directory):
 ```terminal
 patch -p1 < path/to/the/diff/file
@@ -96,7 +96,7 @@ I recommend creating a directory called patches to separate the diff files insid
 applied.
 
 ## Restart dwm in place
-The first patch I'm going to apply is called {{< target-blank title="dwm-restartsig" url="https://dwm.suckless.org/patches/restartsig/" >}}. This makes it possible to restart dwm 'in place'. 
+The first patch I'm going to apply is called [dwm-restartsig](https://dwm.suckless.org/patches/restartsig/). This makes it possible to restart dwm 'in place'. 
 What I mean by this is you do not have to restart your X session by killing the X server, you can just refresh dwm, so for e.g. if you make some changes in your status bar,
 you can see the changes instantly after the refresh. Use the patch command to apply pathces like this:
 ```terminal
@@ -105,7 +105,7 @@ patch -p1 < dwm-restartsig-20180523-6.2.diff
 After you have the restartsig patch, rebuild dwm. You have to restart it manually now, but after that, you can use the Mod+ctrl+shift+q keycombination to refresh dwm without killing X.
 
 ## Customizing the tag indicators
-The {{< target-blank title="activetagindicatorbar" url="https://dwm.suckless.org/patches/activetagindicatorbar/" >}} patch draws a little bar above the tag numbers instead of a square. 
+The [activetagindicatorbar](https://dwm.suckless.org/patches/activetagindicatorbar/) patch draws a little bar above the tag numbers instead of a square. 
 I just think it looks better and I'm also gonna customize it. Apply the patch in the exact same way as I showed above. Refresh dwm to see the changes.
 
 I want to make the indicator bars a little smaller and I want them to be always filled. Open up dwm.c and locate the following part:
@@ -124,7 +124,7 @@ if (occ & 1 << i)
 ```
 
 ## Font Awesome
-In my build, I'm using Font Awesome icons in the statusbar. Here is a {{< target-blank title="cheat sheet" url="https://fontawesome.com/cheatsheet/free/solid" >}} where you can copy the icons from. To be able to display Font Awesome 
+In my build, I'm using Font Awesome icons in the statusbar. Here is a [cheat sheet](https://fontawesome.com/cheatsheet/free/solid) where you can copy the icons from. To be able to display Font Awesome 
 icons in your statusbar, or anywhere else on you system, you need to install the Font Awsome package for your operating system.
 On Arch linux the following command installs the font:
 ```terminal
@@ -153,14 +153,14 @@ I have rules set up in config.def.h for some programs, so for e.g. Firefox will 
 
 ## Statusbar padding
 I have a little extra padding around my icons in the bar to make sure the window idicator does not cover them. To be able to set the padding apply the 
-{{< target-blank title="statuspadding" url="https://dwm.suckless.org/patches/statuspadding/" >}} patch. Then you will be able to set the padding in config.def.h like this:
+[statuspadding](https://dwm.suckless.org/patches/statuspadding/) patch. Then you will be able to set the padding in config.def.h like this:
 ```c
 static const int horizpadbar = 0; /* horizontal padding for statusbar */
 static const int vertpadbar  = 7; /* vertical padding for statusbar */
 ```
 
 ## An awesome bar
-To display the title of every window on the current tag, you can apply the {{< target-blank title="awesomebar" url="https://dwm.suckless.org/patches/awesomebar/" >}} patch like this:
+To display the title of every window on the current tag, you can apply the [awesomebar](https://dwm.suckless.org/patches/awesomebar/) patch like this:
 ```terminal
 patch -p1 < dwm-awesomebar-20200907-6.2.diff
 ```
@@ -171,7 +171,7 @@ My status indicators will look like this:
 {{< image src="/img/blog/dwm-rice/status-indicators.png" alt="unixporn" position="center" style="border-radius: 4px;" >}}
 
 The icons are clickable, for e.g if I click the wifi icon, a little dunst notification will pop up to tell me the signal strength and which network I'm connected to.
-This functionality is achived by {{< target-blank title="dwmblocks" url="https://github.com/torrinfail/dwmblocks" >}} and some patching. I'll cover it a bit later.
+This functionality is achived by [dwmblocks](https://github.com/torrinfail/dwmblocks) and some patching. I'll cover it a bit later.
 
 Dwmblocks makes it possible to update the different indicators separately. This is much better
 than running every status indicator in one infinite loop and update them every 1 sec or something.
@@ -203,9 +203,9 @@ static char delim = ' ';
 I'm using spaces in the Icons column to have some padding between the indicators. The actual icons are the output of my scripts.
 
 Now I'll cover the click functionality, as I promised:
-To be able to have clickable icons, we first have to apply the {{< target-blank title="statuscmd-signal" url="https://dwm.suckless.org/patches/statuscmd/" >}} patch to dwm. Download and apply it with the patch command, just like with the previous patches. 
+To be able to have clickable icons, we first have to apply the [statuscmd-signal](https://dwm.suckless.org/patches/statuscmd/) patch to dwm. Download and apply it with the patch command, just like with the previous patches. 
 
-Then we have to apply the {{< target-blank title="dwmblocks-statuscmd" url="https://dwm.suckless.org/patches/statuscmd/" >}} patch to dwmblocks. 
+Then we have to apply the [dwmblocks-statuscmd](https://dwm.suckless.org/patches/statuscmd/) patch to dwmblocks. 
 (This links to the same page as the statuscmd-signal dwm patch. They are on the same page, scroll down to find them. You can find three patches there, but we only need the statuscmd-signal for dwm and the dwmblocks-statucmd for dwmblocks).
 Download and apply it, then install dwmblocks.
 
@@ -241,7 +241,7 @@ The $BUTTON variable comes from the signal patches we applied to dwm and dwmbloc
 wheel. Here the left click shows a little dunst notification with the essid and the signal strength of the current network, a right click opens up nmtui (a network management tool) in 
 st (which is a terminal emulator).
 
-You can find all my status scripts {{< target-blank title="here" url="https://github.com/laszloszurok/scripts/tree/master/status" >}}.
+You can find all my status scripts [here](https://github.com/laszloszurok/scripts/tree/master/status).
 
 To kill and refresh a status indicator with a key combination you can have something like this in your config.def.h file:
 ```c
@@ -297,7 +297,7 @@ static const char *colors[][3]      = {
 
 ## Gaps
 
-I am using the {{< target-blank title="ru_gaps" url="https://dwm.suckless.org/patches/ru_gaps/" >}} patch to have some space around the windows. Download, then apply it like this:
+I am using the [ru_gaps](https://dwm.suckless.org/patches/ru_gaps/) patch to have some space around the windows. Download, then apply it like this:
 ```terminal
 patch -p1 < dwm-ru_gaps-6.2.diff
 ```

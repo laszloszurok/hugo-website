@@ -14,7 +14,7 @@ List network interfaces:
 ```terminal
 ip link
 ```
-For wireless connection authenticate to the network using {{< target-blank title="iwctl" url="https://wiki.archlinux.org/index.php/Iwd#iwctl" >}}:
+For wireless connection authenticate to the network using [iwctl](https://wiki.archlinux.org/index.php/Iwd#iwctl):
 ```terminal
 iwctl
 ```
@@ -43,7 +43,7 @@ Connect to a network (replace *device* and *SSID* with the appropriate values):
 [iwd]# station device connect SSID
 ```
 
-To share a phone's internet connection through USB, launch {{< target-blank title="dhcpcd" url="https://wiki.archlinux.org/index.php/Dhcpcd" >}}, then connect the phone and start tethering.
+To share a phone's internet connection through USB, launch [dhcpcd](https://wiki.archlinux.org/index.php/Dhcpcd), then connect the phone and start tethering.
 ```terminal
 dhcpcd 
 ```
@@ -55,14 +55,14 @@ ping archlinux.org
 
 ## Time and date
 
-Update the system clock with {{< target-blank title="timedatectl" url="https://wiki.archlinux.org/index.php/System_time#System_clock" >}}.
+Update the system clock with [timedatectl](https://wiki.archlinux.org/index.php/System_time#System_clock).
 ```terminal
 timedatectl set-ntp true
 ```
 
 ## Partitioning the disk
 
-Use {{< target-blank title="fdisk" url="https://wiki.archlinux.org/index.php/Fdisk" >}} to create partitions. Use {{< target-blank title="lsblk" url="https://wiki.archlinux.org/index.php/Device_file" >}} to get the appropriate device names. (eg. /dev/sda)
+Use [fdisk](https://wiki.archlinux.org/index.php/Fdisk) to create partitions. Use [lsblk](https://wiki.archlinux.org/index.php/Device_file) to get the appropriate device names. (eg. /dev/sda)
 ```terminal
 fdisk /path/to/device
 ```
@@ -128,7 +128,7 @@ swapon /path/to/swap/partition
 
 ## Symlinking /etc/resolv.conf
 
-If you want to use {{< target-blank title="systemd-resolved" url="https://wiki.archlinux.org/title/Systemd-resolved" >}} for name resolution, run the following command:
+If you want to use [systemd-resolved](https://wiki.archlinux.org/title/Systemd-resolved) for name resolution, run the following command:
 ```terminal
 ln -sf /run/systemd/resolve/stub-resolv.conf /mnt/etc/resolv.conf
 ```
