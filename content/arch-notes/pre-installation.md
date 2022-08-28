@@ -62,7 +62,7 @@ timedatectl set-ntp true
 
 ## Partitioning the disk
 
-Use [fdisk](https://wiki.archlinux.org/index.php/Fdisk) to create partitions. Use [lsblk](https://wiki.archlinux.org/index.php/Device_file) to get the appropriate device names. (eg. /dev/sda)
+Use [fdisk](https://wiki.archlinux.org/index.php/Fdisk) to create partitions. Use [lsblk](https://wiki.archlinux.org/index.php/Device_file) to get the appropriate device names. (e.g. /dev/sda)
 ```terminal
 fdisk /path/to/device
 ```
@@ -84,7 +84,7 @@ For MBR:
 
 ## Creating filesystems
 
-Use the partition names in the paths (eg. mkfs.ext4 /dev/sda3)
+Use the partition names in the paths (e.g. mkfs.ext4 /dev/sda3)
 
 If you created an efi partition:
 ```terminal

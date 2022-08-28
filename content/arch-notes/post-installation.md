@@ -35,7 +35,7 @@ Run [hwclock](https://wiki.archlinux.org/index.php/System_time#Hardware_clock) t
 hwclock --systohc
 ```
 
-Uncomment the needed [locales](https://wiki.archlinux.org/index.php/Locale) in /etc/locale.gen (eg. en_US.UTF-8):
+Uncomment the needed [locales](https://wiki.archlinux.org/index.php/Locale) in /etc/locale.gen (e.g. en_US.UTF-8):
 ```terminal
 vim /etc/locale.gen
 ```
@@ -52,7 +52,7 @@ echo LANG=en_US.UTF-8 >> /etc/locale.conf
 
 ## Network configuration
 
-Choose a [hostname](https://wiki.archlinux.org/index.php/Network_configuration#Set_the_hostname) (eg. arch):
+Choose a [hostname](https://wiki.archlinux.org/index.php/Network_configuration#Set_the_hostname) (e.g. arch):
 ```terminal
 echo arch >> /etc/hostname
 ```
@@ -409,7 +409,7 @@ I'm using the [ALSA](https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_A
 sudo pacman -S alsa-utils
 ```
 
-I have media control buttons on my laptop (they can control for eg. switching to next/prev. song on Spotify). For these to work I'm going to install playerctl.
+I have media control buttons on my laptop (they can control for e.g. switching to next/prev. song on Spotify). For these to work I'm going to install playerctl.
 ```terminal
 sudo pacman -S playerctl
 ```

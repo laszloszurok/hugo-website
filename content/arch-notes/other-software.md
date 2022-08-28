@@ -57,7 +57,7 @@ endif
 ```
 
 To make the usage of vim or nvim more comfortable, I recommend swapping the CapsLock and Esapce keys functionality, as CapsLock is kind of a useless key, but in an easily reachable
-position on the keyboard, while Escape is used fairly often if you use vim bindings. To make this happen, autostart the following command (eg. with .xinitrc):
+position on the keyboard, while Escape is used fairly often if you use vim bindings. To make this happen, autostart the following command (e.g. with .xinitrc):
 ```bash
 setxkbmap -option 'caps:swapescape'
 ```
