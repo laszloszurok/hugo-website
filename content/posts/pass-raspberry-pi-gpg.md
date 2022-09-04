@@ -48,10 +48,11 @@ pass init 3B45F6I8F73C872F57B227F1232F1A65AC6F5044
 pass git init
 ```
 ```terminal
-pass git remote add password-store user@ip-addr-of-pi:/path/to/the/repo
+pass git remote add password-store user@ip_addr_of_pi:/path/to/the/repo
 ```
 
 Push to the Pi:
+
 ```
 pass git push -u --all
 ```
@@ -67,4 +68,4 @@ gpg --armor --export-secret-keys 3B45F6I8F73C872F57B227F1232F1A65AC6F5044 > gpg-
 App settings:
 
 Copy the exported key onto the Android device and import it to OpenKeyChain.
-In the Password Store app provide the url of the repository on the Pi (e.g. user@ip-addr-of-pi:/path/to/the/repo) and clone with ssh.
+In the Password Store app provide the url of the repository on the Pi (e.g. `user@ip_addr_of_pi:/path/to/the/repo`) and clone with ssh.

@@ -133,7 +133,7 @@ make
 
 The make command will build a binary file called spotifywm.so.
 
-Now create a file called spotify under this location: /usr/local/bin/ with the following content:
+Now create a file called `spotify` under this location: `/usr/local/bin/` with the following content:
 
 ```text
 LD_PRELOAD=/usr/lib/libcurl.so.4:/home/<USERNAME>/spotifywm/spotifywm.so /usr/bin/spotify

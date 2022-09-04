@@ -12,7 +12,8 @@ tags:
 
 A repeater is a device that is used to extend transmissions so that the signal can cover longer distances. 
 
-To extend the coverage of a wireless network, one can set up a secondary router to connect to the main router and act as a repeater. Nowadays most routers have this functionality built in. 
+To extend the coverage of a wireless network, one can set up a secondary router to connect to the main router and act as a repeater.
+Nowadays most routers have this functionality built in. 
 
 ## Factory reset the secondary router
 
@@ -20,7 +21,9 @@ Reset the device to its factory settings by holding the reset button for about 1
 
 ## Accessing the settings
 
-Connect the secondary router to a computer with an ethernet cable. Log in to the admin panel of the device on its default IP address. (Usually 192.168.0.1 or 192.168.1.1).
+Connect the secondary router to a computer with an ethernet cable.
+Log in to the admin panel of the device on its default IP address.
+(Usually `192.168.0.1` or `192.168.1.1`).
 
 ## Repeater settings
 
@@ -38,7 +41,8 @@ Now you will have to enter the password for the extended network, which has to m
 
 {{< image src="/img/blog/router-repeater/security.png" alt="Where" position="center" style="border-radius: 4px;" >}}
 
-The next step is to change the default IP address of the device, so it won't conflict with the address of the main access point. I'm going to change it to 192.168.0.2, because 192.168.0.1 is the address of the main router.
+The next step is to change the default IP address of the device, so it won't conflict with the address of the main access point.
+I'm going to change it to `192.168.0.2`, because `192.168.0.1` is the address of the main router.
 
 {{< image src="/img/blog/router-repeater/change-ip.png" alt="Where" position="center" style="border-radius: 4px;" >}}
 
@@ -48,6 +52,7 @@ Now locate the wireless settings in your device (in my case Wireless -> Wireless
 
 ## Rebooting
 
-Save your settings and look for the reboot option. In my case it's under Maintenance -> Reboot.
+Save your settings and look for the reboot option.
+In my case it's under Maintenance -> Reboot.
 
 Give a little time for the repeater to boot up, then you should be able to connect to the network through it. 

@@ -8,47 +8,59 @@ tags:
   - arch
   - pre-install
 ---
+
 ## Connecting to the internet
 
 List network interfaces:
+
 ```terminal
 ip link
 ```
+
 For wireless connection authenticate to the network using [iwctl](https://wiki.archlinux.org/index.php/Iwd#iwctl):
+
 ```terminal
 iwctl
 ```
 
 In the iwctl prompt, list all Wi-Fi devices:
+
 ```
 [iwd]# device list
 ```
 
 If iwctl shows that the device is powered off, exit from iwctl and enable the interface with the following command,
+
 ```terminal
 rfkill unblock all
 ```
+
 then run iwctl again. Scan for networks (replace *device* with a device name):
+
 ```
 [iwd]# station device scan
 ```
 
 List available networks (replace *device* with a device name):
+
 ```
 [iwd]# station device get-networks
 ```
 
 Connect to a network (replace *device* and *SSID* with the appropriate values):
+
 ```
 [iwd]# station device connect SSID
 ```
 
 To share a phone's internet connection through USB, launch [dhcpcd](https://wiki.archlinux.org/index.php/Dhcpcd), then connect the phone and start tethering.
+
 ```terminal
 dhcpcd 
 ```
 
 Test the connection with the following command:
+
 ```terminal
 ping archlinux.org
 ```
@@ -56,13 +68,16 @@ ping archlinux.org
 ## Time and date
 
 Update the system clock with [timedatectl](https://wiki.archlinux.org/index.php/System_time#System_clock).
+
 ```terminal
 timedatectl set-ntp true
 ```
 
 ## Partitioning the disk
 
-Use [fdisk](https://wiki.archlinux.org/index.php/Fdisk) to create partitions. Use [lsblk](https://wiki.archlinux.org/index.php/Device_file) to get the appropriate device names. (e.g. /dev/sda)
+Use [fdisk](https://wiki.archlinux.org/index.php/Fdisk) to create partitions.
+Use [lsblk](https://wiki.archlinux.org/index.php/Device_file) to get the appropriate device names. (e.g. `/dev/sda`)
+
 ```terminal
 fdisk /path/to/device
 ```
@@ -84,19 +99,22 @@ For MBR:
 
 ## Creating filesystems
 
-Use the partition names in the paths (e.g. mkfs.ext4 /dev/sda3)
+Use the partition names in the paths (e.g. `mkfs.ext4 /dev/sda3`)
 
 If you created an efi partition:
+
 ```terminal
 mkfs.fat -F32 /path/to/efi/partition
 ```
 
 If you created a swap partition:
+
 ```terminal
 mkswap /path/to/swap/partition
 ```
 
 For the root partition:
+
 ```terminal
 mkfs.ext4 /path/to/root/partiton
 ```
@@ -106,22 +124,27 @@ mkfs.ext4 /path/to/root/partiton
 Attach the created partitions to the existing filesystem.
 
 First the root partition:
+
 ```terminal
 mount /path/to/root/partition /mnt
 ```
 
 If you created an efi partiton:
+
 ```terminal
 mkdir /mnt/boot
 ```
+
 ```terminal
 mkdir /mnt/boot/EFI
 ```
+
 ```terminal
 mount /path/to/efi/partition /mnt/boot/EFI
 ```
 
 If you created a swap partiton:
+
 ```terminal
 swapon /path/to/swap/partition
 ```
@@ -129,7 +152,9 @@ swapon /path/to/swap/partition
 ## Symlinking /etc/resolv.conf
 
 If you want to use [systemd-resolved](https://wiki.archlinux.org/title/Systemd-resolved) for name resolution, run the following command:
+
 ```terminal
 ln -sf /run/systemd/resolve/stub-resolv.conf /mnt/etc/resolv.conf
 ```
+
 (This symlink cannot be created while inside arch-chroot.)
