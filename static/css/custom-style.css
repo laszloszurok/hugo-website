@@ -1,8 +1,10 @@
 #logo-img { width: 8rem; }
+
 .home {
     text-transform: uppercase;
     padding: 0;
 }
+
 .home a {  
     color: var(--main-fg);
     text-decoration: none;
@@ -11,10 +13,13 @@
     box-sizing: border-box;
     font-family: "Fira Code", monospace;
     font-weight: bold; 
-    font-size: 0.9em;
+    font-size: 0.9rem;
 }
+
 .home a:hover { color: var(--link-fg); }
+
 .message { margin-bottom: 3em; }
+
 @media only screen and (max-width: 800px) {
     .message { margin: initial; }
     .home { padding: 1em 0 0 0; }
