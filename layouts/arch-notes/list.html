@@ -27,14 +27,12 @@
 {{ .Content }}
 
 <ul class="post-list">
-  {{ $pages := .Pages }}
-  {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
-  {{ range (where $pages "Section" "!=" "") }}
+{{ range $index, $pages := .Pages }}
   <li>
-    <span class="date">{{ .Date.Format "2006-01-02" }}</span>
+    <span class="date">{{ add $index 1 }}.</span>
     <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
   </li>
-  {{ end }}
+{{ end }}
 </ul>
 </div>
 {{ partial "footer.html" . }}
