@@ -1,0 +1,38 @@
+{{ partial "header.html" . }}
+<div class="article-meta">
+    <h1><span class="title">{{ .Title | markdownify }}</span></h1>
+    {{ with .Params.author }}<h2 class="author">{{ . }}</h2>{{ end }}
+</div>
+
+{{ if .Params.toc }}
+    {{ .TableOfContents }}
+{{ else }}
+    <!-- invisible placeholder -->
+    <div id="TableOfContents"></div>
+{{- end }}
+
+<main>
+    {{ .Content }}
+</main>
+
+<div class="pagination__buttons">
+    {{ if .NextInSection }}
+    <span class="button previous">
+        <a href="{{ .NextInSection.Permalink }}">
+            <span class="button__icon">←</span>
+            <span class="button__text">{{ .NextInSection.Title | truncate 20 }}</span>
+        </a>
+    </span>
+    {{ end }}
+
+    {{ if .PrevInSection }}
+    <span class="button next">
+        <a href="{{ .PrevInSection.Permalink }}">
+            <span class="button__text">{{ .PrevInSection.Title | truncate 20 }}</span>
+            <span class="button__icon">→</span>
+        </a>
+    </span>
+    {{ end }}
+</div>
+
+{{ partial "footer.html" . }}
