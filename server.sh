@@ -1,6 +1,11 @@
 #!/bin/sh
 
-echo Make sure http traffic is not blocked by the firewall
+if [ ! -d themes/monospace-dark ]; then
+    echo "Installing hugo theme 'monospace-dark' from https://github.com/laszloszurok/monospace-dark.git"
+    git clone https://github.com/laszloszurok/monospace-dark.git themes/monospace-dark
+fi
+
+echo "Make sure http traffic is not blocked by the firewall"
 
 ip_addr=$(ip -4 addr show wlan0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}')
 
