@@ -1,7 +1,6 @@
 ---
 title: "VS Code caps-escape"
 date: 2024-02-18T13:56:07+01:00
-draft: true
 ---
 
 ## VS Code settings.json
