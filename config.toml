@@ -9,7 +9,7 @@ copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_
 
 [params]
     messageTitle = "Welcome to my website!"
-    messageContent = "I write about free and open source software and other IT related topics. You can find all posts under the POSTS menu."
+    messageContent = "I store some IT related (mostly linux desktop specific) notes here for personal use."
     customUrl = "https://github.com/laszloszurok"
 
 [[menu.main]]
@@ -17,14 +17,10 @@ copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_
     url = "/arch-notes/"
     weight = 2
 [[menu.main]]
-    name = "Posts"
-    url = "/posts/"
+    name = "Notes"
+    url = "/notes/"
     weight = 3
 [[menu.main]]
     name = "Contact"
     url = "/contact/"
     weight = 4
-[[menu.main]]
-    name = "RSS"
-    url = "/index.xml"
-    

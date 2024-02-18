@@ -15,7 +15,7 @@ In order to use hibernation, a swap partition or swap file has to be created. Th
 
 ## Kernel parameters
 
-You have to pass the `resume=swap_uuid` parameter to the kernel. Get the UUID of the swap partition with the following command:
+The `resume=swap_uuid` parameter has to be passed to the kernel. Get the UUID of the swap partition with the following command:
 ```terminal
 lsblk -f
 ```
@@ -42,7 +42,7 @@ Open `/etc/mkinitcpio.conf` with a text editor and locate the following line:
 HOOKS=(base udev autodetect modconf block filesystems keyboard fsck)
 ```
 
-You have to add the `resume` hook to this array, somewhere after udev, so the line will be:
+The `resume` hook has to be added to this array, somewhere after udev, so the line will be:
 ```text
 HOOKS=(base udev autodetect modconf block filesystems keyboard resume fsck)
 ```

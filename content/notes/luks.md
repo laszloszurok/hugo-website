@@ -8,13 +8,13 @@ date: 2023-10-14T15:39:59+02:00
 Open the device:
 
 ```terminal
-sudo cryptsetup open /dev/sda1 axagon
+sudo cryptsetup open /dev/sdxx name
 ```
 
 Mount it:
 
 ```terminal
-udisksctl mount -b /dev/sdx name
+udisksctl mount -b /dev/mapper/name
 ```
 
 Add a label:
