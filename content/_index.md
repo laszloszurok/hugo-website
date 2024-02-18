@@ -3,4 +3,4 @@ title: Home
 draft: false
 ---
 
-## Recent posts:
+## Recently edited:
