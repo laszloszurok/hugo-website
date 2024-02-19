@@ -13,26 +13,25 @@
 
 <main>
     {{ .Content }}
+    <div class="pagination__buttons">
+        {{ if .NextInSection }}
+        <span class="button previous">
+            <a href="{{ .NextInSection.Permalink }}">
+                <span class="button__icon">←</span>
+                <span class="button__text">{{ .NextInSection.Title | truncate 20 }}</span>
+            </a>
+        </span>
+        {{ end }}
+
+        {{ if .PrevInSection }}
+        <span class="button next">
+            <a href="{{ .PrevInSection.Permalink }}">
+                <span class="button__text">{{ .PrevInSection.Title | truncate 20 }}</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        {{ end }}
+    </div>
 </main>
-
-<div class="pagination__buttons">
-    {{ if .NextInSection }}
-    <span class="button previous">
-        <a href="{{ .NextInSection.Permalink }}">
-            <span class="button__icon">←</span>
-            <span class="button__text">{{ .NextInSection.Title | truncate 20 }}</span>
-        </a>
-    </span>
-    {{ end }}
-
-    {{ if .PrevInSection }}
-    <span class="button next">
-        <a href="{{ .PrevInSection.Permalink }}">
-            <span class="button__text">{{ .PrevInSection.Title | truncate 20 }}</span>
-            <span class="button__icon">→</span>
-        </a>
-    </span>
-    {{ end }}
-</div>
 
 {{ partial "footer.html" . }}
