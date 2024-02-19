@@ -26,13 +26,12 @@
 
 {{ .Content }}
 
-<ul class="post-list">
-{{ range $index, $pages := .Pages }}
-  <li>
-    <span class="date">{{ add $index 1 }}.</span>
-    <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
-  </li>
-{{ end }}
-</ul>
+    <ol id="arch-note-list">
+    {{ range $pages := .Pages }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+      </li>
+    {{ end }}
+    </ol>
 </div>
 {{ partial "footer.html" . }}
