@@ -29,13 +29,16 @@
 
 {{ .Content }}
 
-<ul class="post-list">
-  {{ range (.Paginate ( where site.RegularPages.ByLastmod.Reverse "Section" "!=" "" | first 5 ) ).Pages }}
-  <li>
-    <span class="date">{{ .Lastmod.Format "2006-01-02" }}</span>
-    <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
-  </li>
-  {{ end }}
-</ul>
+    <div class="list-container">
+      {{ range (.Paginate ( where site.RegularPages.ByLastmod.Reverse "Section" "!=" "" | first 5 ) ).Pages }}
+        <div class="list-item">
+            <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+            <span class="date">{{ .Lastmod.Format "Jan 02, 2006" }}</span>
+        </div>
+      {{ end }}
+    </div>
+    <div id="show-all-btn">
+        <a href="/notes">See all</a>
+    </div>
 </div>
 {{ partial "footer.html" . }}
