@@ -1,5 +1,5 @@
 ---
-title: "Notes about LUKS"
+title: "LUKS notes"
 date: 2023-10-14T15:39:59+02:00
 ---
 
