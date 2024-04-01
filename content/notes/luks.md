@@ -3,6 +3,8 @@ title: "LUKS notes"
 date: 2023-10-14T15:39:59+02:00
 ---
 
+LUKS = Linux Unified Key Setup
+
 ## Add a label to a LUKS encrypted btrfs filesystem
 
 Open the device:
