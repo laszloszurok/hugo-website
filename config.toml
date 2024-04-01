@@ -4,13 +4,12 @@ title = "pulzar.envs.net"
 theme = "monospace-dark"
 copyright = '<a href="https://github.com/laszloszurok/blog-hugo/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>'
 
-[author]
-    name = "László Szurok"
-
 [params]
     messageTitle = "Welcome to my website!"
     messageContent = "I store some IT related (mostly linux desktop specific) notes here for personal use."
     customUrl = "https://github.com/laszloszurok"
+[params.author]
+    name = "László Szurok"
 
 [[menu.main]]
     name = "Arch-notes"
