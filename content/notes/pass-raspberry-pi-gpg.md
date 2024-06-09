@@ -8,7 +8,9 @@ toc: true
 
 * a working Raspberry Pi with ssh access and git installed
 * an other computer with [pass](https://www.passwordstore.org/), [gpg](https://www.gnupg.org/) and git installed
-* optionally an Android phone with [OpenKeyChain](https://www.openkeychain.org/) and [Password Store](https://passwordstore.app/) installed
+* for android:
+    * [OpenKeyChain](https://www.openkeychain.org/) and [Password Store](https://passwordstore.app/),
+    * or [Termux](https://termux.dev/en/) (pkg install pass)
 
 ## Create a repository on the Pi
 
@@ -16,7 +18,7 @@ toc: true
 git init --bare
 ```
 
-## Set up pass
+## First time pass setup
 
 Generate a gpg key:
 
@@ -55,6 +57,21 @@ Push to the Pi:
 
 ```
 pass git push -u --all
+```
+
+## Set up pass on a new machince with an already existing repo on the Pi
+
+For easy configuration of gnupg, copy the gnupg directory to the Pi:
+```terminal
+scp -rp ~/path/to/gnupg user@ip_addr_of_pi:.gnupg
+```
+then it can be pulled to the new machine:
+```terminal
+scp -rp user@ip_addr_of_pi:.gnupg ~/path/to/gnupg
+```
+clone the pass repository:
+```terminal
+git clone user@ip_addr_of_pi:/path/to/passwordstore ~/path/to/passwordstore
 ```
 
 ## Set up Password Store for Android
