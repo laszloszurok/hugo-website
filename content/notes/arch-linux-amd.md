@@ -1,7 +1,6 @@
 ---
 title: "Arch Linux AMD setup"
 date: 2024-07-27T19:41:16+02:00
-draft: true
 ---
 
 ## Quick setup
