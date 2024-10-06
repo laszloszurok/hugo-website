@@ -2,7 +2,6 @@
 title: "Pre-Installation"
 date: 2020-07-04T17:09:50+02:00
 draft: false
-toc: true
 summary: "Contents of this post: Settings and configurations to prepare the installation. (internet, time and date, partitioning, etc.)"
 tags:
   - arch

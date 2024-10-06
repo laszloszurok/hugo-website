@@ -1,7 +1,6 @@
 ---
 title: "Password management with pass and a Raspberry Pi"
 date: 2022-08-28T10:43:35+02:00
-toc: true
 ---
 
 ## Requirements

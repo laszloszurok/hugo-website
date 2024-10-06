@@ -1,7 +1,6 @@
 ---
 title: "Enable hibernation in linux"
 date: 2021-03-19T20:37:24+01:00
-toc: true
 draft: false
 ---
 

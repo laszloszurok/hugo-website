@@ -2,7 +2,6 @@
 title: "Post-Installation"
 date: 2020-07-02T10:14:55+02:00
 draft: false
-toc: true
 summary: "Contents of this post: Various settings and configurations after the installation. (timezone, network, user account, etc.)"
 tags:
   - arch
