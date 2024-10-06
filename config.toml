@@ -1,7 +1,7 @@
 baseURL = "https://pulzar.envs.net"
 languageCode = "en-us"
 title = "pulzar.envs.net"
-theme = "monospace-dark"
+theme = "hugo-theme"
 copyright = '<a href="https://github.com/laszloszurok/blog-hugo/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>'
 
 [params]
