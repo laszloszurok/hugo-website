@@ -1,12 +1,15 @@
 #!/bin/sh
 
 if [ ! -d themes/monospace-dark ]; then
-    echo "Installing hugo theme 'monospace-dark' from https://github.com/laszloszurok/monospace-dark.git"
-    git clone https://github.com/laszloszurok/monospace-dark.git themes/monospace-dark
+    echo "Installing hugo theme"
+    git clone https://github.com/laszloszurok/hugo-theme.git themes/hugo-theme
 fi
 
 echo "Make sure http traffic is not blocked by the firewall"
 
-ip_addr=$(ip -4 addr show wlan0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}')
+for interface in wlp1s0 wlan0; do
+    ip_addr=$(ip -4 addr show $interface | grep -oP '(?<=inet\s)\d+(\.\d+){3}')
+    [ -n "$ip_addr" ] && break
+done
 
 hugo server --buildDrafts --bind "$ip_addr" --baseURL http://"$ip_addr"
