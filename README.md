@@ -3,8 +3,8 @@
 To try the site on your local machine run the following:
 
 ```shell
-git clone https://github.com/laszloszurok/blog-hugo.git
-cd blog-hugo
-git clone https://github.com/laszloszurok/monospace-dark.git themes/monospace-dark
+git clone https://github.com/laszloszurok/hugo-website.git
+cd hugo-website
+git clone https://github.com/laszloszurok/hugo-theme.git themes/hugo-theme
 hugo server
 ```
