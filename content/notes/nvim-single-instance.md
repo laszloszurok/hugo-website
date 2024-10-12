@@ -1,7 +1,6 @@
 ---
 title: "Open files in a single instance of neovim"
 date: 2024-10-12T16:26:53+02:00
-draft: true
 ---
 
 ## Nvim wrapper script
