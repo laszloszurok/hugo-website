@@ -32,6 +32,7 @@ virt-install \
     --vcpus 2 \
     --disk size=8 \
     --cdrom archlinux-2024.10.01-x86_64.iso \
+    --boot uefi \
     --os-variant archlinux
 ```
 
@@ -43,6 +44,7 @@ virt-install \
     --memory 2048 \
     --vcpus 2 \
     --disk Arch-Linux-x86_64-basic-20241001.267073.qcow2 \
+    --boot uefi \
     --import \
     --os-variant archlinux
 ```
