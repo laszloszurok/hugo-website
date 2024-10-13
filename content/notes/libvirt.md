@@ -6,7 +6,7 @@ date: 2024-10-06T09:45:46+02:00
 ## Packages on Arch Linux
 
 ```terminal
-sudo pacman -S libvirt virt-install virt-viewer iptables-nft dnsmasq edk2-ovmf libosinfo
+sudo pacman -S libvirt virt-install virt-viewer qemu-full iptables-nft dnsmasq edk2-ovmf libosinfo
 ```
 
 ## Get OS variants
