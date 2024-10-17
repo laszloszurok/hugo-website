@@ -6,29 +6,32 @@ date: 2024-02-15T17:54:27+01:00
 ## First time initialization
 
 ```terminal
-mkdir $HOME/.cfg
+mkdir $HOME/.dotfiles
 ```
 ```terminal
-git init --bare $HOME/.cfg
+git init --bare $HOME/.dotfiles
 ```
 ```terminal
-alias cfg="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 ```
 ```terminal
-cfg remote add origin <remote-url>
+dotfiles remote add origin <remote-url>
 ```
 ```terminal
-echo ".cfg" >> .gitignore 
+echo ".dotfiles" >> .gitignore
 ```
 
 ## Clone existing repo
 
 ```terminal
-git clone --bare <remote-git-repo-url> --branch <some-branch> $HOME/.cfg 
+git clone --bare <remote-git-repo-url> --branch <some-branch> $HOME/.dotfiles
 ```
 ```terminal
-alias cfg="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 ```
 ```terminal
-cfg checkout --force
+dotfiles config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+```
+```terminal
+dotfiles checkout --force
 ```
