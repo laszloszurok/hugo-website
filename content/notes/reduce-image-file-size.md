@@ -1,5 +1,5 @@
 ---
-title: "Tools for reduceing image file size"
+title: "Tools for reducing image file size"
 date: 2024-12-14T15:44:27+01:00
 ---
 
