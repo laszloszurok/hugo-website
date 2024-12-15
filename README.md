@@ -6,5 +6,5 @@ To try the site on your local machine run the following:
 git clone https://github.com/laszloszurok/hugo-website.git
 cd hugo-website
 git clone https://github.com/laszloszurok/hugo-theme.git themes/hugo-theme
-hugo server --baseURL localhost
+hugo server --baseURL http://localhost
 ```
