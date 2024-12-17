@@ -1,7 +1,6 @@
 ---
 title: "FFmpeg notes"
 date: 2024-12-16T22:11:11+01:00
-draft: true
 ---
 
 ## Record video and sound
