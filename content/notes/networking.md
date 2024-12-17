@@ -35,7 +35,7 @@ It might be necessary to restart the NetworkManager service for the new connecti
 
 `/etc/lighttpd/conf-available/15-redlib.conf`:
 
-```
+```lighttpd
 server.modules += ( "mod_proxy" )
 
 $HTTP["host"] =~ "redlib.lan" {
