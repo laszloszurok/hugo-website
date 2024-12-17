@@ -54,3 +54,39 @@ sudo lighty-enable-mod
 ```terminal
 sudo service lighttpd force-reload
 ```
+
+## PiVPN
+
+### Split tunneling
+
+Get network addresses from pivpn `setupVars.conf`:
+
+```terminal
+cat /etc/pivpn/wireguard/setupVars.conf
+```
+
+```text
+...
+
+IPv4addr=192.168.0.111/24
+IPv4gw=192.168.0.1
+pivpnNET=10.232.117.0
+subnetClass=24
+pivpnNETv6="fd11:5ee:bad:c0de::"
+subnetClassv6=64
+
+...
+```
+
+Set `AllowedIPs` in the wireguard client config based on the above values:
+
+```text
+...
+
+AllowedIPs = 192.168.0.1/24, 10.232.117.0/24, fd11:5ee:bad:c0de::/64
+
+...
+```
+
+This way all the traffic that wants to go to `AllowedIPs` will be routed through the VPN.
+The rest of the traffic will be routed as usual, without going through the VPN.
