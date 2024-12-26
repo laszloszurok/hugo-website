@@ -20,8 +20,10 @@ else
     if [ -S "$socket" ]; then
         # An instance is already running.
         # Update the current working directory of the instance,
-        # then open the new file.
-        nvim --server "$socket" --remote-send ":cd $(pwd)<cr>" > /dev/null 2>&1
+        # then open the new file. <esc><esc> is sent to make sure
+        # than nvim is in normal mode before executing the rest
+        # of the keystrokes.
+        nvim --server "$socket" --remote-send "<esc><esc>:cd $(pwd)<cr>" > /dev/null 2>&1
         nvim --server "$socket" --remote "$@" > /dev/null 2>&1
     else
         # No instance is running yet.
