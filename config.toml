@@ -16,9 +16,13 @@ copyright = '<a href="https://github.com/laszloszurok/blog-hugo/blob/master/LICE
     url = "/notes/"
     weight = 1
 [[menu.main]]
+    name = "Books I read"
+    url = "/books/"
+    weight = 2
+[[menu.main]]
     name = "Contact"
     url = "/contact/"
-    weight = 2
+    weight = 3
 
 [frontmatter]
 enableGitInfo = true
