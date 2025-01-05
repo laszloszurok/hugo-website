@@ -8,3 +8,5 @@ cd hugo-website
 git clone https://github.com/laszloszurok/hugo-theme.git themes/hugo-theme
 hugo server --baseURL http://localhost
 ```
+
+Source of ASCII arts: https://www.asciiart.eu/
