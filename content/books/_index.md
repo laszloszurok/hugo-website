@@ -2,6 +2,11 @@
 title: Books I read in...
 ---
 
+## 2025
+
+* Stephen King
+    * [The Little Sisters of Eluria](https://en.wikipedia.org/wiki/The_Little_Sisters_of_Eluria#Plot_summary)
+
 ## 2024
 
 * Frank Herbert
