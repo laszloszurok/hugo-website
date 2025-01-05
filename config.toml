@@ -2,7 +2,7 @@ baseURL = "https://pulzar.envs.net"
 languageCode = "en-us"
 title = "pulzar.envs.net"
 theme = "hugo-theme"
-copyright = '<a href="https://github.com/laszloszurok/blog-hugo/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>'
+copyright = '<a href="https://github.com/laszloszurok/hugo-website/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a>'
 
 [params]
     messageTitle = "Welcome to my website!"
