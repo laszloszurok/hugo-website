@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ ! -d themes/monospace-dark ]; then
+if [ ! -d themes/hugo-theme ]; then
     echo "Installing hugo theme"
     git clone https://github.com/laszloszurok/hugo-theme.git themes/hugo-theme
 fi
