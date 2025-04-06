@@ -27,6 +27,39 @@ nmcli connection up pivpn
 
 It might be necessary to restart the NetworkManager service for the new connection to work.
 
+## NGINX
+
+### Proxy
+
+#### Create a site config
+
+`/etc/nginx/sites-available/redlib`:
+
+```nginx
+server {
+    listen 80;
+    listen [::]:80;
+
+    server_name redlib.lan;
+
+    location / {
+        proxy_pass http://localhost:5001;
+    }
+}
+```
+
+#### Enable the site
+
+```terminal
+sudo ln -sf /etc/nginx/sites-available/redlib /etc/nginx/sites-enabled/redlib
+```
+
+#### Restart the nginx service
+
+```terminal
+sudo systemctl restart nginx.service
+```
+
 ## Lighttpd
 
 ### Proxy
