@@ -142,3 +142,26 @@ AllowedIPs = <IPv4addr>
 ```
 
 Maybe one day I will debug what causes DNS resolution to fail with the first config, but this solution seemingly does not have any limitations that would affect my usage of the tunnel and it works consistently.
+
+## Some networking terms
+
+### PON
+
+Passive Optical Network: A network that uses unpowered devices to carry signals.
+
+#### GPON
+
+Gigabit capable PON.
+
+### ONT/OLT/ONU
+
+Optical Network Terminal / Optical Line Terminal / Optical Network Unit: Basically a modem for fibre-optic networks.
+The end of the line for the optical network.
+
+### Fibre media converter
+
+A networking device that can convert between different media types, like twisted pair to fibre optic cabling.
+
+### PPPoE
+
+Point-to-Point Protocol over Ethernet: Authenticates the user with a username and a password to the ISP.
