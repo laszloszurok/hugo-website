@@ -165,3 +165,23 @@ A networking device that can convert between different media types, like twisted
 ### PPPoE
 
 Point-to-Point Protocol over Ethernet: Authenticates the user with a username and a password to the ISP.
+
+## Netcat
+
+### Send data from one device to an other on the same network
+
+#### Start listening on the receiving end and write incoming data to 'file'
+
+```terminal
+nc -l -p 1234 > file < /dev/null
+```
+
+#### Estabilish connection on the sending end
+
+```terminal
+nc 192.168.1.5 1234
+```
+
+Type something and press return.
+The line will be written to the file on the other end.
+Firewalls will of course block this if the port is not open.
