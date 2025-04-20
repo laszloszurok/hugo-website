@@ -185,3 +185,7 @@ nc 192.168.1.5 1234
 Type something and press return.
 The line will be written to the file on the other end.
 Firewalls will of course block this if the port is not open.
+
+## .home.arpa special-use domain
+
+https://datatracker.ietf.org/doc/html/rfc8375
