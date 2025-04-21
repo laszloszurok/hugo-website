@@ -19,31 +19,12 @@ git init --bare
 
 ## First time pass setup
 
-Generate a gpg key:
-
-```terminal
-gpg --full-gen-key
-```
-
-Get the ID of the key:
-
-```terminal
-gpg --list-keys
-```
-
-```text
-/home/user/.gnupg/pubring.kbx
--------------------------------------------
-pub   rsa3072 2022-08-24 [SC]
-      3B45F6I8F73C872F57B227F1232F1A65AC6F5044
-uid           [ultimate] user <user@somedomain>
-sub   rsa3072 2022-08-24 [E]
-```
+[Generate a gpg key](../gpg/#generate-a-new-key)
 
 Initialize pass:
 
 ```terminal
-pass init 3B45F6I8F73C872F57B227F1232F1A65AC6F5044
+pass init '<keyid>'
 ```
 ```terminal
 pass git init
@@ -75,11 +56,7 @@ git clone user@ip_addr_of_pi:/path/to/passwordstore ~/path/to/passwordstore
 
 ## Set up Password Store for Android
 
-Export your private key:
-
-```terminal
-gpg --armor --export-secret-keys 3B45F6I8F73C872F57B227F1232F1A65AC6F5044 > gpg-private-key.asc
-```
+[Export your private key](../gpg/#export-your-private-key)
 
 App settings:
 
