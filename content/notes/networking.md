@@ -27,6 +27,22 @@ nmcli connection up pivpn
 
 It might be necessary to restart the NetworkManager service for the new connection to work.
 
+### Analyze surrounding wireless networks
+
+```terminal
+nmcli device wifi rescan
+```
+
+```terminal
+nmcli device wifi list
+```
+
+#### Watch and sort networks by channel
+
+```terminal
+watch "nmcli -fields "CHAN,BARS,SIGNAL,SSID" device wifi list | sort -n"
+```
+
 ## NGINX
 
 ### Proxy
