@@ -205,3 +205,17 @@ Firewalls will of course block this if the port is not open.
 ## .home.arpa special-use domain
 
 https://datatracker.ietf.org/doc/html/rfc8375
+
+## Download large file with wget
+
+This makes wget continously retry the download on http/network errors.
+The `--continue` flag makes sure that the already downloaded content is kept on disk and the download will continue where it was left off.
+
+```sh
+while true; do
+    if wget 'https://some.url/file.ext' --output-document 'file.ext' --retry-connrefused --waitretry=1 --read-timeout=20 --timeout=15 -t 0 --continue; then
+        break
+    fi
+    sleep 1
+done
+```
