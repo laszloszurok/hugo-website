@@ -206,7 +206,7 @@ Firewalls will of course block this if the port is not open.
 
 https://datatracker.ietf.org/doc/html/rfc8375
 
-## Download large file with wget
+## Download a large file with wget
 
 This makes wget continously retry the download on http/network errors.
 The `--continue` flag makes sure that the already downloaded content is kept on disk and the download will continue where it was left off.
