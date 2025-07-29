@@ -1,5 +1,18 @@
 #!/bin/sh
 
-hugo
+echo "Generating static files..."
+hugo --quiet
 
-scp -r public/* envs.net:public_html/
+echo "Archiving static files for upload..."
+tar czf public.tar.gz public
+
+echo "Uploading archive..."
+scp public.tar.gz envs.net:
+
+echo "Removing local archive..."
+rm -f public.tar.gz
+
+echo "Extracting archive on the remote..."
+ssh envs.net 'tar xzf public.tar.gz --strip-components 1 --directory public_html && rm -f public.tar.gz'
+
+echo "All done!"
