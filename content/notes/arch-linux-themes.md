@@ -9,6 +9,8 @@ Install gnome-themes, it contains `adwaita-dark`:
 sudo pacman -S gnome-themes-extra
 ```
 
+Set the following env vars to apply the theme:
+
 ```
 GTK_THEME=Adwaita:dark
 GTK2_RC_FILES=/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc
