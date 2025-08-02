@@ -13,6 +13,6 @@ echo "Removing local archive..."
 rm -f public.tar.gz
 
 echo "Extracting archive on the remote..."
-ssh envs.net 'tar xzf public.tar.gz --strip-components 1 --directory public_html && rm -f public.tar.gz'
+ssh envs.net 'tar xzf public.tar.gz --touch --strip-components 1 --directory public_html && rm -f public.tar.gz'
 
 echo "All done!"
