@@ -1,6 +1,7 @@
 ---
 title: "Redirect reddit to libreddit"
 date: 2024-04-01T12:51:22+02:00
+pagefind_index_page: true
 ---
 
 [Libreddit](https://github.com/libreddit/libreddit) will run locally on port 8080 and will be accessed on the `libreddit.local` url.

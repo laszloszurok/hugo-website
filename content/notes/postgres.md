@@ -1,6 +1,7 @@
 ---
 title: "PostgreSQL notes"
 date: 2024-02-26T19:03:42+01:00
+pagefind_index_page: true
 ---
 
 ## Export a postgresql database

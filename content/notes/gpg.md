@@ -1,6 +1,7 @@
 ---
 title: "Gnupg notes"
 date: 2024-12-08T20:19:17+01:00
+pagefind_index_page: true
 ---
 
 ## Reload the agent after a version update

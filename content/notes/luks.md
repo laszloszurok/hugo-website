@@ -1,6 +1,7 @@
 ---
 title: "LUKS notes"
 date: 2023-10-14T15:39:59+02:00
+pagefind_index_page: true
 ---
 
 LUKS = Linux Unified Key Setup

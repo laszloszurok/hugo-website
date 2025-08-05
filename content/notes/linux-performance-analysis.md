@@ -1,6 +1,7 @@
 ---
 title: "Linux Performance Analysis"
 date: 2025-07-29T19:21:37+02:00
+pagefind_index_page: true
 ---
 
 src: https://netflixtechblog.com/linux-performance-analysis-in-60-000-milliseconds-accc10403c55

@@ -1,5 +1,5 @@
 ---
 title: Notes
 params:
-  search_enabled: true
+  pagefind_searchbar_enabled: true
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Linux dotfile management with git"
 date: 2024-02-15T17:54:27+01:00
+pagefind_index_page: true
 ---
 
 ## First time initialization

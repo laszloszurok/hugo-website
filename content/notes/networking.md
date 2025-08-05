@@ -1,6 +1,7 @@
 ---
 title: "Networking notes"
 date: 2024-10-26T22:57:13+02:00
+pagefind_index_page: true
 ---
 
 ## Networkmanager

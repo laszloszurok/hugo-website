@@ -1,7 +1,7 @@
 ---
 title: "SSH notes"
 date: 2024-02-29T11:42:51+01:00
-draft: false
+pagefind_index_page: true
 ---
 
 ## Tunnel a remote port to localhost through a jump host

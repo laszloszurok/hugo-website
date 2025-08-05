@@ -1,6 +1,7 @@
 ---
 title: "Libvirt notes"
 date: 2024-10-06T09:45:46+02:00
+pagefind_index_page: true
 ---
 
 ## Packages on Arch Linux

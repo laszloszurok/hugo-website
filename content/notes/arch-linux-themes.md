@@ -1,6 +1,7 @@
 ---
 title: "Arch Linux Adwaita-dark theme"
 date: 2024-07-30T21:44:22+02:00
+pagefind_index_page: true
 ---
 
 ## Install gnome-themes

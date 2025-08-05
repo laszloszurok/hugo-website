@@ -1,6 +1,7 @@
 ---
 title: "Shell scripting notes"
 date: 2024-10-16T19:26:00+02:00
+pagefind_index_page: true
 ---
 
 ## POSIX

@@ -1,6 +1,7 @@
 ---
 title: "Disable beep on Linux TTY"
 date: 2024-10-11T22:39:22+02:00
+pagefind_index_page: true
 ---
 
 ## List loaded kernel modules

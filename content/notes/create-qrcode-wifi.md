@@ -1,6 +1,7 @@
 ---
 title: "Create a qrcode which can be scanned to connect to Wifi"
 date: 2025-03-30T18:52:10+02:00
+pagefind_index_page: true
 ---
 
 ## Generate qrcode with qrencode
