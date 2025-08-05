@@ -15,7 +15,7 @@ echo "Activating python virtual environment..."
 . venv/bin/activate
 
 echo "Generating search index with pagefind..."
-python3 -m pagefind --site public
+python3 -m pagefind --site public --quiet
 
 echo "Archiving static files for upload..."
 tar czf public.tar.gz public
