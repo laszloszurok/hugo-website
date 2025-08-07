@@ -37,12 +37,14 @@ pagefind_index_page: true
 | gnome-themes-extra | gui themes |
 | gnu-free-fonts | gnu free font family |
 | gnu-netcat | nc |
+| grim | screenshot utility for wayland |
 | gvfs | virtual filesystem for usb mounts |
 | gvfs-mtp | mount cellphones (gio mount ...) |
 | hypridle | idle daemon for hyprland |
 | hyprland | wayland window manager |
 | hyprlock | screen lock utility for hyprland |
 | hyprpaper | wallpeper utility for hyprland |
+| hyprpicker | color picker for wayland |
 | hyprpolkitagent | polkit authentication agent for hyprland |
 | imv | a minimalist image viewer |
 | jdk-openjdk | openjdk java latest development kit |
@@ -82,6 +84,7 @@ pagefind_index_page: true
 | qt6-wayland | qt6 apis for wayland |
 | ripgrep | for recursive search in directories, cmd: rg (fzf uses it) |
 | shellcheck | shell script analysis tool (used by bashls) |
+| slurp | select a region of the screen on wayland (used by grim) |
 | socat | socket cat, transfer data between sockets |
 | starship | a cross shell prompt |
 | thunar | gui file manager |
