@@ -39,3 +39,15 @@ gtk-icon-theme-name = Adwaita
 gtk-theme-name = Adwaita
 gtk-application-prefer-dark-theme = true
 ```
+
+## Hide minimize, maximize and close buttons for all windows
+
+```terminal
+gsettings set org.gnome.desktop.wm.preferences button-layout :
+```
+
+### To restore them
+
+```terminal
+gsettings set org.gnome.desktop.wm.preferences button-layout 'icons:minimize,maximize,close'
+```
