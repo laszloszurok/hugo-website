@@ -1,7 +1,7 @@
 ---
 title: 'Turn a laptop with Ubuntu into a locked down kiosk - sort of'
 date: 2025-08-21T19:35:09+02:00
-draft: true
+draft: false
 pagefind_index_page: true
 ---
 
