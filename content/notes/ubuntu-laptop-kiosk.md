@@ -71,6 +71,12 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash i8042.nokbd"
 ...
 ```
 
+then regenerate the grub config file:
+
+```terminal
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
 ### USB ports
 
 To disable all USB ports install [usbguard](https://github.com/USBGuard/usbguard):
@@ -102,3 +108,5 @@ This is achived with some `video` kernel parameters in `/etc/default/grub`:
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash i8042.nokbd video=HDMI-A-1:1920x1080@60 video=eDP-1:d"
 ...
 ```
+
+then regenerate the grub config and reboot.
