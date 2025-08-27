@@ -30,6 +30,8 @@ Label is effective for subsequent mounts.
 
 ## Add a secondary PBKDF2 key for decryption
 
+PBKDF: Password-Based Key Derivation Function
+
 By default cryptsetup will use the Argon2i key derivation function.
 Decrypting the partition on a device with less memory than of the machine on which the encryption took place could fail when using cryptsetup with the default settings.
 (Argon2i is memory-hard, meaning it requires a significant amount of memory to compute, which makes it resistant to GPU and ASIC attacks.)
