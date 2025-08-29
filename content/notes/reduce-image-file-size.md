@@ -10,6 +10,12 @@ pagefind_index_page: true
 jpegoptim --size 256k /path/to/image.jpg
 ```
 
+## optipng
+
+```terminal
+optipng /path/to/image.jpg
+```
+
 ## imagemagick
 
 ### mogrify
