@@ -4,6 +4,8 @@ title: Books I read in...
 
 ## 2025
 
+* Scott Chacon and Ben Straub
+    * [Pro Git](https://git-scm.com/book/en/v2)
 * Stephen King
     * [The Little Sisters of Eluria](https://en.wikipedia.org/wiki/The_Little_Sisters_of_Eluria#Plot_summary)
 
