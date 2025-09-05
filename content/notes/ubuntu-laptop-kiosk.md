@@ -47,7 +47,7 @@ For subsequent boots the user will be logged in on tty1 without having to type a
 
 [Cage](https://github.com/cage-kiosk/cage) is a minimal wayland compositor, designed for kiosk usecases.
 
-Append the following lines to ~/.profile:
+Append the following lines to `~/.profile`:
 
 ```shell
 [ -z "$SSH_TTY" ] && cage -- firefox --kiosk pulzar.envs.net
