@@ -14,6 +14,8 @@ pagefind_index_page: true
 
 ```terminal
 cd /etc/netplan
+```
+```terminal
 sudoedit 99_config.yaml
 ```
 
