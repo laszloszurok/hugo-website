@@ -6,6 +6,7 @@ pagefind_index_page: true
 
 | package name | description |
 | :----------- | :---------- |
+| avahi | network service discovery (enable avahi-daemon.service) |
 | alsa-firmware | some laptop sound cards need this |
 | base-devel | basic tools to build arch linux packages (makepkg) |
 | bash-language-server | bash linting and auto completition for neovim |
@@ -67,6 +68,7 @@ pagefind_index_page: true
 | noto-fonts | google noto ttf fonts |
 | noto-fonts-cjk | google noto chinese/japanese/korean font |
 | noto-fonts-emoji | google noto color emoji font |
+| nss-mdns | for *.local hostname resolutin with avahi |
 | pacman-contrib | pacman uitility scripts (pacdiff, pacsearch etc.) |
 | pipewire | audio system |
 | pipewire-alsa | pipewire alsa support |
