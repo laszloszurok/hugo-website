@@ -4,6 +4,53 @@ date: 2024-10-26T22:57:13+02:00
 pagefind_index_page: true
 ---
 
+## Set static IP for Ubuntu server
+
+[ubuntu networking docs](https://documentation.ubuntu.com/server/explanation/networking/configuring-networks/)
+
+### Edit netplan config files
+
+#### Static config
+
+```terminal
+cd /etc/netplan
+sudoedit 99_config.yaml
+```
+
+add the following content:
+```yaml
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp1s0: # replace with actual interface name (check with 'ip addr')
+      addresses:
+        - 192.168.1.4/24 # replace with desired static ip
+      routes:
+        - to: default
+          via: 192.168.1.1 # replace with actual default gw address
+      nameservers:
+          addresses: [192.168.1.1, 1.1.1.1] # replace with desired dns server addresses
+```
+
+#### Disable DHCP
+
+Edit `/etc/netplan/50-cloud-init.yaml` if exists and set dhcp to `false`:
+
+```yaml
+network:
+  version: 2
+  ethernets:
+    enp1s0:
+      dhcp4: false
+```
+
+### Apply the netplan config
+
+```terminal
+sudo netplan apply
+```
+
 ## Networkmanager
 
 ### Wireguard
