@@ -12,6 +12,8 @@ pagefind_index_page: true
 
 #### Static config
 
+Create a new config file in `/etc/netplan`:
+
 ```terminal
 cd /etc/netplan
 ```
@@ -20,6 +22,7 @@ sudoedit 99_config.yaml
 ```
 
 add the following content:
+
 ```yaml
 network:
   version: 2
