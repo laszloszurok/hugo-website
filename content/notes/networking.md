@@ -30,7 +30,7 @@ network:
         - to: default
           via: 192.168.1.1 # replace with actual default gw address
       nameservers:
-          addresses: [192.168.1.1, 1.1.1.1] # replace with desired dns server addresses
+        addresses: [192.168.1.1, 1.1.1.1] # replace with desired dns server addresses
 ```
 
 #### Disable DHCP
