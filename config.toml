@@ -1,6 +1,6 @@
-baseURL = "https://pulzar.envs.net"
+baseURL = "https://catloaf.lol"
 languageCode = "en-us"
-title = "pulzar.envs.net"
+title = "catloaf.lol"
 theme = "hugo-theme"
 copyright = '<a href="https://github.com/laszloszurok/hugo-website/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a>'
 
