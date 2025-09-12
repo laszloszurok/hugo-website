@@ -8,5 +8,3 @@ cd hugo-website
 git submodule update --init
 hugo server --baseURL http://localhost
 ```
-
-Source of ASCII arts: https://www.asciiart.eu/
