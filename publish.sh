@@ -8,6 +8,7 @@ hugo --quiet
 if [ ! -d venv ]; then
     echo "Installing pagefind in a python virtual environment..."
     python3 -m venv venv
+    . venv/bin/activate
     pip install 'pagefind[extended]'
 fi
 
