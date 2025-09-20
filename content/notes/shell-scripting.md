@@ -66,6 +66,15 @@ groupname2-202504201507.csv
 groupname3-202504201810.csv
 ```
 
+### Search and replace with find and sed
+
+```terminal
+find . \
+    -name "*.js" \
+    -name "*.html" \
+    -exec sed -i -e "s/QBT_TR(//g" -e "s/)QBT_TR\[CONTEXT=[a-zA-Z_][a-zA-Z0-9_]*\]//g" {} \;
+```
+
 ## Bash
 
 ### Add flags to a command conditionally
