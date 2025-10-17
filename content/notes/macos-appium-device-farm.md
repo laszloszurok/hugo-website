@@ -1,7 +1,6 @@
 ---
 title: 'Set up Appium Device Farm on MacOS'
 date: 2025-10-17T20:04:00+02:00
-draft: true
 pagefind_index_page: true
 ---
 
