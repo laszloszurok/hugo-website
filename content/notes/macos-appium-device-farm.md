@@ -85,7 +85,7 @@ Create `/Library/LaunchDaemons/com.devicefarm.appium.plist`.
 Node and appium are installed for your user, so absolute paths have to be used and some environment variables have to be set in the service plist for appium to launch successfully.
 The user environment variables can be printed with the `env` command.
 
-Valide the syntax with:
+Validate the syntax with:
 
 ```terminal
 sudo plutil -lint /Library/LaunchDaemons/com.devicefarm.appium.plist
