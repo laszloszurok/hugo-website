@@ -8,6 +8,10 @@ pagefind_index_page: true
 
 Install these as a non-root user.
 
+### Android Debug Bridge (adb)
+
+If you install Android Studio, adb will be available on this path: `/Users/youruser/Library/Android/sdk/platform-tools`
+
 ### Node
 
 #### Install node version manager (nvm)
