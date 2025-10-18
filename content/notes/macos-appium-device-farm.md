@@ -79,4 +79,109 @@ appium driver install xcuitest
 
 ## Start the appium server on boot
 
-TODO
+### LaunchDaemon configuration
+
+Create `/Library/LaunchDaemons/com.devicefarm.appium.plist`.
+Node and appium are installed for your user, so absolute paths have to be used and some environment variables have to be set in the service plist for appium to launch successfully.
+The user environment variables can be printed with the `env` command.
+
+Valide the syntax with:
+
+```terminal
+sudo plutil -lint /Library/LaunchDaemons/com.devicefarm.appium.plist
+```
+
+The service will be started on boot.
+You can also start it with:
+
+```terminal
+sudo launchctl load /Library/LaunchDaemons/com.devicefarm.appium.plist
+```
+
+View status:
+
+```terminal
+sudo launchctl list com.devicefarm.appium
+```
+
+Stop:
+
+```terminal
+sudo launchctl unload /Library/LaunchDaemons/com.devicefarm.appium.plist
+```
+
+`/Library/LaunchDaemons/com.devicefarm.appium.plist`:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.devicefarm.appium</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/youruser/.nvm/versions/node/v20.19.5/bin/appium</string>
+    <string>server</string>
+    <string>-ka</string>
+    <string>800</string>
+    <string>--use-plugins</string>
+    <string>device-farm</string>
+    <string>-pa</string>
+    <string>/wd/hub</string>
+    <string>--plugin-device-farm-platform</string>
+    <string>both</string>
+    <string>--plugin-device-farm-ios-device-type</string>
+    <string>real</string>
+    <string>--plugin-device-farm-android-device-type</string>
+    <string>real</string>
+    <string>--allow-insecure</string>
+    <string>'*:chromedriver_autodownload'</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/youruser</string>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key>
+    <string>/Users/youruser/.nvm/versions/node/v20.19.5/bin:/Users/youruser/Library/Android/sdk/platform-tools:/usr/local/bin</string>
+
+    <key>HOME</key>
+    <string>/Users/youruser</string>
+
+    <key>ANDROID_HOME</key>
+    <string>/Users/youruser/Library/Android/sdk</string>
+
+    <key>ANDROID_SDK_ROOT</key>
+    <string>/Users/youruser/Library/Android/sdk</string>
+
+    <key>JAVA_HOME</key>
+    <string>/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home</string>
+
+    <key>NVM_DIR</key>
+    <string>/Users/youruser/.nvm</string>
+
+    <key>NVM_CD_FLAGS</key>
+    <string>-q</string>
+
+    <key>NVM_BIN</key>
+    <string>/Users/youruser/.nvm/versions/node/v20.19.5/bin</string>
+
+    <key>NVM_INC</key>
+    <string>/Users/youruser/.nvm/versions/node/v20.19.5/include/node</string>
+  </dict>
+
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+
+  <key>StandardOutPath</key>
+  <string>/var/log/appium.out</string>
+  <key>StandardErrorPath</key>
+  <string>/var/log/appium.err</string>
+</dict>
+</plist>
+```
