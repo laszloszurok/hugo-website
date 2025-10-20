@@ -36,7 +36,7 @@ pass git remote add password-store user@ip_addr_of_pi:/path/to/the/repo
 
 Push to the Pi:
 
-```
+```terminal
 pass git push -u --all
 ```
 
