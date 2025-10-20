@@ -185,3 +185,32 @@ sudo launchctl unload /Library/LaunchDaemons/com.devicefarm.appium.plist
 </dict>
 </plist>
 ```
+
+## Log rotation
+
+The above config writes appium logs to `/var/log/appium.out` and `/var/log/appium.err`.
+By default these files will grow indefinitely, so rotation has to be configured for old logs to be removed from the filesystem.
+
+Create `/etc/newsyslog.d/com.devicefarm.appium.conf` with the below content:
+
+```txt
+/var/log/appium.out  644  7  1000  *  Z
+/var/log/appium.err  644  7  1000  *  Z
+```
+
+Explanation:
+
+| field | meaning |
+| :---- | :------ |
+| /var/log/myapp.out | Log file path
+| 644 | File mode after rotation
+| 7 | Keep 7 old log files
+|1000 | Rotate when file >1000 KB (1 MB)
+| * | Don’t rotate on schedule (only by size)
+| Z | Compress old logs with gzip
+
+To execute a manual rotation, run:
+
+```terminal
+sudo newsyslog -v
+```
