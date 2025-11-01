@@ -38,6 +38,8 @@ pagefind_index_page: true
 | gnome-themes-extra | gui themes |
 | gnu-free-fonts | gnu free font family |
 | gnu-netcat | nc |
+| go | go compiler tools |
+| gopls | go language server |
 | grim | screenshot utility for wayland |
 | gvfs | virtual filesystem for usb mounts |
 | gvfs-mtp | mount cellphones (gio mount ...) |
