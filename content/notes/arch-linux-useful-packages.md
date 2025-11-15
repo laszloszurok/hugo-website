@@ -110,6 +110,7 @@ pagefind_index_page: true
 | xdg-desktop-portal-gtk | xdg-desktop-portal backend using gtk |
 | xdg-desktop-portal-hyprland | xdg-desktop-portal backend for hyprland |
 | yt-dlp | for playing youtube videos with mpv |
+| yt-dlp-ejs | needed for yt-dlp to solve js challenges (needed for youtube support) |
 | zathura | pdf viewer with vim-like keybindings |
 | zathura-pdf-mupdf | allows mupdf compatibility in zathura |
 | zbar | cli tool for reading barcodes/qrcodes from an image |
