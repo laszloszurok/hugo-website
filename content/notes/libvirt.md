@@ -67,6 +67,27 @@ virt-install \
     --os-variant archlinux
 ```
 
+#### Home Assistant example
+
+A USB host device can be passed through to the guest with the `--hostdev` flag.
+List USB devices on the host with `lsusb`.
+Format: `bus-number`.`device-number`
+
+```terminal
+virt-install \
+    --name haos \
+    --description "Home Assistant OS" \
+    --os-variant=generic \
+    --ram=4096 \
+    --vcpus=2 \
+    --disk /var/lib/libvirt/images/haos_ova-16.3.qcow2,bus=scsi \
+    --controller type=scsi,model=virtio-scsi \
+    --import \
+    --graphics none \
+    --boot uefi \
+    --hostdev 001.005
+```
+
 ## List VMs
 
 ```terminal
@@ -86,4 +107,16 @@ virsh destroy archvm
 ```
 ```terminal
 virsh undefine archvm
+```
+
+In case of `Cannot undefine domain with nvram...` error:
+
+```terminal
+virsh undefine archvm --nvram
+```
+
+To remove the qcow2 image file with the vm:
+
+```terminal
+virsh undefine archvm --remove-all-storage
 ```
