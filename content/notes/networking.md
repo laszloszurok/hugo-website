@@ -272,3 +272,17 @@ while true; do
     sleep 1
 done
 ```
+
+## Nmap
+
+### Find DHCP server
+
+```terminal
+sudo nmap --script broadcast-dhcp-discover
+```
+
+#### Using a specific interface
+
+```terminal
+sudo nmap --script broadcast-dhcp-discover -e "$your_interface_name"
+```
