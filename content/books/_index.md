@@ -10,6 +10,7 @@ title: Books I read in...
     * [The Long Walk](https://en.wikipedia.org/wiki/The_Long_Walk_(novel))
     * [The Little Sisters of Eluria](https://en.wikipedia.org/wiki/The_Little_Sisters_of_Eluria#Plot_summary)
     * [11/22/63](https://en.wikipedia.org/wiki/11/22/63#Plot)
+    * [Doctor Sleep](https://en.wikipedia.org/wiki/Doctor_Sleep_(novel)#Plot)
 
 ## 2024
 
