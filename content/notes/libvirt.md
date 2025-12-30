@@ -67,6 +67,12 @@ virt-install \
     --os-variant archlinux
 ```
 
+### For Windows guests
+
+https://www.spice-space.org/index.html
+
+Install [spice-guest-tools](https://www.spice-space.org/download/windows/spice-guest-tools/spice-guest-tools-latest.exe) inside the VM for proper resolution and clipboard share.
+
 #### Home Assistant example
 
 A USB host device can be passed through to the guest with the `--hostdev` flag.
