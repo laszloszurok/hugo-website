@@ -10,6 +10,11 @@ pagefind_index_page: true
 sudo pacman -S libvirt virt-install virt-viewer qemu-full iptables-nft dnsmasq edk2-ovmf libosinfo
 ```
 
+## GUI frontends
+
+* virt-manager
+* gnome-boxes
+
 ## Libvirt system level vs session level
 
 By default the `virsh` and `virt-*` commands will use the `qemu:///session` connection, which launches an unprivileged libvirtd instance (the process name is `virtqemud` on Arch) running as the current user. There is a system level libvirtd instance launched by systemd.
