@@ -71,6 +71,7 @@ pagefind_index_page: true
 | noto-fonts-cjk | google noto chinese/japanese/korean font |
 | noto-fonts-emoji | google noto color emoji font |
 | nss-mdns | for *.local hostname resolutin with avahi |
+| opensnitch | application firewall |
 | pacman-contrib | pacman uitility scripts (pacdiff, pacsearch etc.) |
 | pipewire | audio system |
 | pipewire-alsa | pipewire alsa support |
