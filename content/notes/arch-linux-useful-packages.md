@@ -95,6 +95,7 @@ pagefind_index_page: true
 | thunar | gui file manager |
 | translate-shell | cli for google translate |
 | ttf-dejavu | a font family |
+| tumbler | thumbnail generator service for thunar |
 | vscode-css-languageserver | css language server
 | vscode-html-languageserver | html language server
 | vscode-json-languageserver | json language server
