@@ -2,6 +2,12 @@
 title: Books I read in...
 ---
 
+## 2026
+
+* Stephen King
+    * [Insomnia](https://en.wikipedia.org/wiki/Insomnia_(novel)#Plot)
+    * [The Jaunt](https://en.wikipedia.org/wiki/The_Jaunt#Plot)
+
 ## 2025
 
 * Scott Chacon and Ben Straub
