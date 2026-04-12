@@ -6,7 +6,7 @@ title: Books I read in...
 
 * Stephen King
     * [Insomnia](https://en.wikipedia.org/wiki/Insomnia_(novel)#Plot)
-    * [The Jaunt](https://en.wikipedia.org/wiki/The_Jaunt#Plot)
+    * [Skeleton Crew](https://en.wikipedia.org/wiki/Skeleton_Crew_(short_story_collection)#Stories)
 
 ## 2025
 
