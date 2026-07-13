@@ -56,6 +56,7 @@ pagefind_index_page: true
 | jre21-openjdk | openjdk java 21 full runtime environment |
 | jq | cli json processor |
 | kitty | terminal emulator |
+| libguestfs | copy files into/out of virtual machines (provides virt-copy-in, virt-copy-out) |
 | lazygit | tui for git |
 | libnotify | library for sending desktop notifications |
 | libreoffice-still | office suite |
