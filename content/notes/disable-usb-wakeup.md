@@ -4,7 +4,41 @@ date: 2025-12-19T10:50:45+01:00
 pagefind_index_page: true
 ---
 
-## List USB devices that can wake up the system from sleep
+This fixes the problem where a Logitech Bolt USB dongle prevents the system from going to sleep.
+
+## Using udev rules
+
+### Find the vendor ID and product ID of the dongle:
+
+```terminal
+lsusb | grep -i logitech
+```
+
+```text
+Bus 008 Device 005: ID 046d:c548 Logitech, Inc. Logi Bolt Receiver
+```
+
+### Create `/etc/udev/rules.d/90-logi-bolt-wakeup.rules` and add:
+
+```text
+ACTION=="add", SUBSYSTEM=="usb", DRIVERS=="usb", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c548", ATTR{power/wakeup}="disabled"
+```
+
+### Finally make sure the rule takes effect:
+
+```terminal
+sudo udevadm control --reload
+```
+
+```terminal
+sudo udevadm trigger
+```
+
+## Alternative solution
+
+This prevents a specific USB port from waking the system, so if you plug the dongle into an other port you'll have to repeat these steps.
+
+### List USB devices that can wake up the system from sleep
 
 ```terminal
 cat /proc/acpi/wakeup
@@ -29,7 +63,7 @@ LID     S4       *enabled   platform:PNP0C0D:00
 SLPB    S3       *enabled   platform:PNP0C0E:00
 ```
 
-## Toggle device status
+### Toggle device status
 
 ```terminal
 echo XHC4 > /proc/acpi/wakeup
