@@ -7,9 +7,6 @@ pagefind_index_page: true
 ## First time initialization
 
 ```terminal
-mkdir $HOME/.dotfiles
-```
-```terminal
 git init --bare $HOME/.dotfiles
 ```
 ```terminal
