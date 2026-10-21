@@ -1,7 +1,6 @@
 ---
 title: 'Renew TLS certs on Kubernetes with a CronJob and acme.sh'
 date: 2026-10-21T21:30:18+02:00
-draft: true
 pagefind_index_page: true
 ---
 
